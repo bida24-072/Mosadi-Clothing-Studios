@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mosadi Clothing Studios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Mosadi<small>CLOTHING STUDIOS</small></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in <em>Touch</em></h1>
+            <p>Wholesale enquiries, collaborations, custom orders, or just to say hello — we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Let's <em>talk.</em></h2>
+                <div class="contact-detail">
+                    <span class="label">Studio</span>
+                    <span class="value">Gaborone, Botswana</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="label">Phone</span>
+                    <span class="value">+267 71 234 567</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="label">Email</span>
+                    <span class="value">hello@mosadistudios.co.bw</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="label">Instagram</span>
+                    <span class="value">@mosadistudios</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="label">Hours</span>
+                    <span class="value">Mon–Sat · 9AM–6PM</span>
+                </div>
+                <div class="contact-detail">
+                    <span class="label">Wholesale</span>
+                    <span class="value">wholesale@mosadistudios.co.bw</span>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="section-label">Send a Message</span>
+                <h3 style="font-size: 2rem; margin-bottom: 30px; color: var(--choc); font-weight: 500; letter-spacing: -0.02em;">We'll respond within 24 hours.</h3>
+                <form onsubmit="submitContact(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-name">Your Name</label>
+                            <input type="text" id="c-name" required placeholder="e.g. Kabelo M.">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-email">Email</label>
+                            <input type="email" id="c-email" required placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-subject">Subject</label>
+                        <select id="c-subject">
+                            <option>General Enquiry</option>
+                            <option>Wholesale / Bulk Order</option>
+                            <option>Custom Design</option>
+                            <option>Collaboration</option>
+                            <option>Press / Media</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message</label>
+                        <textarea id="c-message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">Send Message <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Mosadi <span>Clothing</span></h3>
+                    <small>STUDIOS · ESTD 2024</small>
+                    <p>Where Botswana creativity meets contemporary fashion.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="collections.html">1966 Prestige</a></li>
+                        <li><a href="collections.html">Winter</a></li>
+                        <li><a href="shop.html">Signature</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li>Gaborone, Botswana</li>
+                        <li>+267 71 234 567</li>
+                        <li>hello@mosadistudios.co.bw</li>
+                        <li>Mon–Sat · 9AM–6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 MOSADI CLOTHING STUDIOS</span>
+                <span>ROOTED IN IDENTITY · DRIVEN BY CREATIVITY</span>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
