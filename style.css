@@ -973,3 +973,249 @@ footer {
     padding: 0 30px;
     max-width: 900px;
 }
+/* ============================================
+   VALUES — EDITORIAL MAGAZINE LAYOUT
+============================================ */
+.values-editorial {
+    background-color: var(--choc);
+    color: var(--cream);
+    padding: 140px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.values-header {
+    max-width: 1300px;
+    margin: 0 auto 100px;
+    padding: 0 40px;
+}
+
+.values-header .section-label { color: var(--orange); }
+
+.values-title {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    margin: 30px 0;
+    max-width: 900px;
+}
+.values-title em {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.values-intro {
+    color: rgba(239, 231, 217, 0.65);
+    font-size: 1.05rem;
+    max-width: 480px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   VALUES LIST — Full-width expanding rows
+============================================ */
+.values-list {
+    border-top: 1px solid rgba(239, 231, 217, 0.12);
+}
+
+.value-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid rgba(239, 231, 217, 0.12);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+/* Hover background — subtle orange wash */
+.value-row::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(216, 85, 43, 0.12) 0%,
+        rgba(216, 85, 43, 0.03) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.value-row:hover::before { opacity: 1; }
+
+/* Animated right-edge indicator */
+.value-row::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--orange);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.value-row:hover::after { transform: scaleY(1); }
+
+/* Big number column */
+.value-number {
+    font-family: var(--serif);
+    font-size: clamp(5rem, 10vw, 10rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: rgba(239, 231, 217, 0.15);
+    padding: 60px 40px;
+    text-align: right;
+    transition: color 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+.value-row:hover .value-number {
+    color: var(--orange);
+    transform: translateX(-8px);
+}
+
+/* Row inner content */
+.value-row-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    padding: 60px 60px 60px 20px;
+    align-items: center;
+}
+
+.value-row-title h3 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.value-row:hover .value-row-title h3 {
+    transform: translateX(10px);
+}
+
+.value-row-text p {
+    color: rgba(239, 231, 217, 0.7);
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 18px;
+    transition: color 0.5s ease;
+}
+.value-row:hover .value-row-text p {
+    color: rgba(239, 231, 217, 0.92);
+}
+
+.value-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    padding: 6px 14px;
+    border: 1px solid rgba(216, 85, 43, 0.4);
+    border-radius: 40px;
+    transition: all 0.5s ease;
+}
+.value-row:hover .value-tag {
+    background-color: var(--orange);
+    color: var(--choc);
+    border-color: var(--orange);
+}
+
+/* ============================================
+   CLOSING QUOTE — Full bleed
+============================================ */
+.values-quote {
+    background-color: var(--choc-deep);
+    padding: 140px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.values-quote::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(216, 85, 43, 0.15), transparent 60%);
+    pointer-events: none;
+}
+
+.quote-mark {
+    font-family: var(--serif);
+    font-size: 8rem;
+    line-height: 0.5;
+    color: var(--orange);
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0.6;
+}
+
+.values-quote p {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.8rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--cream);
+    max-width: 900px;
+    margin: 0 auto 30px;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+.quote-credit {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+    position: relative;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 900px) {
+    .values-editorial { padding: 90px 0 0; }
+    .values-header { padding: 0 24px; margin-bottom: 60px; }
+
+    .value-row {
+        grid-template-columns: 1fr;
+    }
+
+    .value-number {
+        text-align: left;
+        padding: 40px 24px 0;
+        font-size: 5rem;
+    }
+
+    .value-row-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px 24px 50px;
+    }
+
+    .value-row:hover .value-number { transform: none; }
+    .value-row:hover .value-row-title h3 { transform: none; }
+
+    .values-quote { padding: 90px 24px; }
+    .quote-mark { font-size: 5rem; }
+}
