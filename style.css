@@ -915,3 +915,61 @@ footer {
     .contact-detail { flex-direction: column; align-items: flex-start; gap: 6px; }
     .contact-detail .value { text-align: left; }
 }
+.cta-split {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.cta-bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.5s ease;
+}
+
+.cta-bg-left {
+    left: 0;
+    background-position: right center;
+}
+
+.cta-bg-right {
+    right: 0;
+    background-position: left center;
+}
+
+.cta-split:hover .cta-bg-left {
+    transform: translateX(-10px) scale(1.02);
+}
+
+.cta-split:hover .cta-bg-right {
+    transform: translateX(10px) scale(1.02);
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(42, 27, 15, 0.85) 0%,
+        rgba(42, 27, 15, 0.5) 45%,
+        rgba(42, 27, 15, 0.5) 55%,
+        rgba(42, 27, 15, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 30px;
+    max-width: 900px;
+}
