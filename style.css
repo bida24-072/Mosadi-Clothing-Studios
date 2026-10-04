@@ -1219,3 +1219,99 @@ footer {
     .values-quote { padding: 90px 24px; }
     .quote-mark { font-size: 5rem; }
 }
+/* ============================================
+   VALUES — MINIMAL DIVIDER LIST
+============================================ */
+.values-minimal {
+    background-color: var(--cream-warm);
+    padding: 120px 0;
+}
+
+.values-minimal-header {
+    margin-bottom: 70px;
+    max-width: 700px;
+}
+
+.values-minimal-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--choc);
+    margin-top: 25px;
+}
+.values-minimal-title em {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.values-minimal-list {
+    border-top: 1px solid var(--border);
+    max-width: 1000px;
+}
+
+.value-min-row {
+    display: grid;
+    grid-template-columns: 60px 320px 1fr;
+    gap: 40px;
+    align-items: baseline;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s ease;
+}
+.value-min-row:hover {
+    padding-left: 12px;
+}
+
+.value-min-num {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+    font-weight: 500;
+}
+
+.value-min-row h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--choc);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.value-min-row p {
+    color: var(--grey);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.values-minimal-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    line-height: 1.4;
+    color: var(--choc);
+    max-width: 700px;
+    margin-top: 70px;
+    padding-left: 40px;
+    border-left: 3px solid var(--orange);
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .values-minimal { padding: 80px 0; }
+    .value-min-row {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+        padding: 28px 0;
+    }
+    .value-min-row h3 {
+        grid-column: 2;
+        margin-bottom: 10px;
+    }
+    .value-min-row p {
+        grid-column: 2;
+    }
+}
