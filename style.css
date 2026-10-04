@@ -1315,3 +1315,267 @@ footer {
         grid-column: 2;
     }
 }
+/* ============================================
+   VALUES — KINETIC MANIFESTO
+============================================ */
+.manifesto {
+    background-color: var(--choc);
+    color: var(--cream);
+    padding: 0 0 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ---------------------------------------------
+   MARQUEE TICKER
+--------------------------------------------- */
+.manifesto-marquee {
+    border-top: 1px solid rgba(239, 231, 217, 0.12);
+    border-bottom: 1px solid rgba(239, 231, 217, 0.12);
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.manifesto-marquee::before,
+.manifesto-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+.manifesto-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--choc), transparent);
+}
+.manifesto-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--choc), transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    align-items: center;
+}
+
+.manifesto-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-track span {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: rgba(239, 231, 217, 0.45);
+    transition: color 0.4s ease;
+    cursor: default;
+}
+
+.marquee-track span.dot {
+    color: var(--orange);
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.marquee-track span:not(.dot):hover {
+    color: var(--orange);
+    font-style: italic;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ---------------------------------------------
+   HEADER
+--------------------------------------------- */
+.manifesto-header {
+    max-width: 1300px;
+    margin: 0 auto 70px;
+    padding: 0 40px;
+}
+.manifesto-header .section-label { color: var(--orange); }
+
+.manifesto-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    margin-top: 25px;
+}
+.manifesto-title em {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+/* ---------------------------------------------
+   INTERACTIVE STACK
+--------------------------------------------- */
+.manifesto-stack {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border-top: 1px solid rgba(239, 231, 217, 0.12);
+}
+
+.manifesto-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 40px;
+    align-items: baseline;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(239, 231, 217, 0.12);
+    cursor: pointer;
+    position: relative;
+    transition: padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.manifesto-item::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--orange);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.manifesto-item:hover,
+.manifesto-item.active {
+    padding: 40px 0 40px 30px;
+}
+
+.manifesto-item:hover::before,
+.manifesto-item.active::before {
+    width: 30px;
+}
+
+.mi-num {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    color: rgba(239, 231, 217, 0.35);
+    font-weight: 500;
+    transition: color 0.4s ease;
+}
+.manifesto-item:hover .mi-num,
+.manifesto-item.active .mi-num {
+    color: var(--orange);
+}
+
+.mi-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mi-body h3 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: rgba(239, 231, 217, 0.85);
+    transition: color 0.4s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.manifesto-item:hover h3,
+.manifesto-item.active h3 {
+    color: var(--cream);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.mi-body p {
+    color: rgba(239, 231, 217, 0.55);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.manifesto-item:hover p,
+.manifesto-item.active p {
+    opacity: 1;
+    transform: translateY(0);
+    color: rgba(239, 231, 217, 0.8);
+}
+
+/* ---------------------------------------------
+   CLOSING QUOTE
+--------------------------------------------- */
+.manifesto-quote {
+    max-width: 1300px;
+    margin: 120px auto 0;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.manifesto-quote p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.manifesto-quote span {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+/* ---------------------------------------------
+   RESPONSIVE
+--------------------------------------------- */
+@media (max-width: 900px) {
+    .manifesto { padding-bottom: 70px; }
+    .manifesto-marquee { padding: 30px 0; margin-bottom: 60px; }
+    .marquee-track { gap: 40px; }
+    .manifesto-header { padding: 0 24px; margin-bottom: 40px; }
+    .manifesto-stack { padding: 0 24px; }
+
+    .manifesto-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        padding: 24px 0;
+    }
+    .manifesto-item:hover,
+    .manifesto-item.active {
+        padding: 30px 0 30px 15px;
+    }
+    .manifesto-item::before { left: -24px; }
+    .manifesto-item:hover::before,
+    .manifesto-item.active::before { width: 15px; }
+
+    .mi-body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .mi-body p {
+        opacity: 1;
+        transform: none;
+    }
+    .manifesto-quote { padding: 0 24px; margin-top: 70px; }
+}
