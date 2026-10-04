@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Mosadi Clothing Studios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Mosadi<small>CLOTHING STUDIOS</small></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>The <em>Shop</em></h1>
+            <p>Every piece tells a story. Every stitch carries meaning. Wear your heritage boldly.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="shop-filters">
+            <button class="filter-btn active" onclick="filterShop('all', this)">All</button>
+            <button class="filter-btn" onclick="filterShop('tshirts', this)">T-Shirts</button>
+            <button class="filter-btn" onclick="filterShop('hoodies', this)">Hoodies & Sweaters</button>
+            <button class="filter-btn" onclick="filterShop('trousers', this)">Trousers</button>
+            <button class="filter-btn" onclick="filterShop('accessories', this)">Accessories</button>
+        </div>
+
+        <div class="shop-grid" id="shop-grid"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Mosadi <span>Clothing</span></h3>
+                    <small>STUDIOS · ESTD 2024</small>
+                    <p>Where Botswana creativity meets contemporary fashion.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="collections.html">1966 Prestige</a></li>
+                        <li><a href="collections.html">Winter</a></li>
+                        <li><a href="shop.html">Signature</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li>Gaborone, Botswana</li>
+                        <li>+267 71 234 567</li>
+                        <li>hello@mosadistudios.co.bw</li>
+                        <li>Mon–Sat · 9AM–6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 MOSADI CLOTHING STUDIOS</span>
+                <span>ROOTED IN IDENTITY · DRIVEN BY CREATIVITY</span>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
