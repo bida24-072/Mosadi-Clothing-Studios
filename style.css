@@ -1410,3 +1410,164 @@ footer {
     .ph-slide.active { transform: scale(1); }
     .ph-content { animation: none; }
 }
+/* ============================================
+   COLLECTIONS PAGE — 4-Card Grid
+============================================ */
+.collections-preview {
+    background-color: var(--cream);
+    padding: 100px 0;
+}
+
+.collections-section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 70px;
+}
+.collections-section-header .section-label {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    color: var(--orange);
+}
+.collections-section-header .section-title {
+    margin-bottom: 20px;
+}
+.collections-section-header p {
+    color: var(--grey);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ---- 4-Card Grid ---- */
+.collections-grid-four {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* ---- Card ---- */
+.collection-card-four {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+.collection-card-four:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(61, 40, 23, 0.12);
+    border-color: var(--choc);
+}
+
+/* ---- Image ---- */
+.collection-img-four {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s ease;
+}
+.collection-card-four:hover .collection-img-four {
+    transform: scale(1.04);
+}
+
+/* Small orange accent on top of each image */
+.collection-img-four::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-card-four:hover .collection-img-four::after {
+    transform: scaleX(1);
+}
+
+/* ---- Info Block ---- */
+.collection-info-four {
+    padding: 40px 40px 45px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.coll-num {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.collection-info-four h3 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--choc);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.collection-info-four p {
+    color: var(--grey);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.coll-link {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--choc);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+.coll-link i {
+    transition: transform 0.4s ease;
+}
+.collection-card-four:hover .coll-link {
+    color: var(--orange);
+}
+.collection-card-four:hover .coll-link i {
+    transform: translateX(8px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .collections-preview { padding: 70px 0; }
+    .collections-section-header { margin-bottom: 50px; }
+
+    .collections-grid-four {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .collection-img-four { height: 340px; }
+    .collection-info-four { padding: 30px 28px 35px; }
+    .collection-info-four h3 { font-size: 1.7rem; }
+}
+
+@media (max-width: 500px) {
+    .collection-img-four { height: 280px; }
+    .collection-info-four { padding: 25px 22px 30px; }
+    .collection-info-four h3 { font-size: 1.5rem; }
+}
