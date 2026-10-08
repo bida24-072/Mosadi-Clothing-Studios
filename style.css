@@ -202,29 +202,24 @@ nav a.active::after {
 /* ============================================
    HEADER — Responsive
 ============================================ */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     .nav-container {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 16px;
         justify-items: center;
     }
-    .logo {
-        justify-self: center;
-    }
+    .logo { justify-self: center; }
+    .nav-icons { justify-self: center; }
     nav ul {
-        gap: 22px;
+        gap: 18px;
         flex-wrap: wrap;
         justify-content: center;
     }
     nav a {
-        font-size: 0.68rem;
-        letter-spacing: 0.14em;
-    }
-    .nav-icons {
-        justify-self: center;
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
     }
 }
-
 @media (max-width: 500px) {
     .logo-mark { width: 40px; height: 40px; }
     .logo-name { font-size: 1.3rem; }
