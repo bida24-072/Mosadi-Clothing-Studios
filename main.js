@@ -250,7 +250,7 @@ function checkoutCart() {
     const total = `P${getCartTotal().toFixed(2)}`;
     const message = `Dumela Mosadi Clothing Studios! 👋\n\nI'd like to order:\n\n${items}\n\nTotal: ${total}\n\nPlease confirm availability and delivery. Ke a leboga!`;
 
-    const phone = '26771234567';
+    const phone = '26778631810';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
