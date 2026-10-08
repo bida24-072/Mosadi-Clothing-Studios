@@ -11,37 +11,47 @@
 </head>
 <body>
 
+    <!-- ============================================
+         TOP BAR
+    ============================================ -->
     <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
-<header>
-    <div class="container nav-container">
-        <a href="index.html" class="logo">
-            <img src="IMG-20261004-WA0045.jpg" alt="Mosadi Clothing Studios" class="logo-mark">
-            <div class="logo-text">
-                <div class="logo-name">Mosadi</div>
-                <div class="logo-sub">CLOTHING STUDIOS</div>
+
+    <!-- ============================================
+         HEADER
+    ============================================ -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="IMG-20261004-WA0045.jpg" alt="Mosadi Clothing Studios" class="logo-mark">
+                <div class="logo-text">
+                    <div class="logo-name">Mosadi</div>
+                    <div class="logo-sub">CLOTHING STUDIOS</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
             </div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-       <div class="nav-icons">
-    <i class="fas fa-search"></i>
-    <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
-        <i class="fas fa-shopping-bag"></i>
-        <span class="cart-count" id="cart-count">0</span>
-    </button>
-</div>
-    </div>
-</header>
+        </div>
+    </header>
 
     <main>
 
-        <!-- HERO -->
+        <!-- ============================================
+             HERO
+        ============================================ -->
         <section class="hero" style="padding:0;">
             <div class="hero-content">
                 <span class="hero-eyebrow">Founded 2024 · Botswana</span>
@@ -67,7 +77,9 @@
             </div>
         </section>
 
-        <!-- BRAND STORY -->
+        <!-- ============================================
+             BRAND STORY
+        ============================================ -->
         <section class="story">
             <div class="container story-grid">
                 <div class="story-img">
@@ -84,7 +96,9 @@
             </div>
         </section>
 
-        <!-- COLLECTIONS PREVIEW -->
+        <!-- ============================================
+             COLLECTIONS PREVIEW
+        ============================================ -->
         <section class="collections-preview">
             <div class="container">
                 <div class="collections-header">
@@ -116,150 +130,162 @@
             </div>
         </section>
 
-      <section class="meanings">
-    <div class="container">
-        <div class="meanings-header">
-            <span class="section-label" style="text-align: center;">Signature Designs</span>
-            <h2 class="section-title">Three names.<br>Three <em>meanings.</em></h2>
-            <p>Each of our core designs is inspired by a relationship that shapes who we are.</p>
-        </div>
+        <!-- ============================================
+             DESIGN MEANINGS
+        ============================================ -->
+        <section class="meanings">
+            <div class="container">
+                <div class="meanings-header">
+                    <span class="section-label" style="text-align: center;">Signature Designs</span>
+                    <h2 class="section-title">Three names.<br>Three <em>meanings.</em></h2>
+                    <p>Each of our core designs is inspired by a relationship that shapes who we are.</p>
+                </div>
 
-        <div class="meanings-grid">
-            <div class="meaning-card">
-                <div class="meaning-img" style="background-image: url('mme.jpg');"></div>
-                <div class="meaning-content">
-                    <span class="meaning-num">DESIGN 01</span>
-                    <h3>Mme</h3>
-                    <span class="meaning-en">Mother</span>
-                    <p>Inspired by the wisdom, strength, sacrifice, and nurturing of a mother. A tribute to the woman who held everything together — often without being asked.</p>
+                <div class="meanings-grid">
+                    <div class="meaning-card">
+                        <div class="meaning-img" style="background-image: url('mme.jpg');"></div>
+                        <div class="meaning-content">
+                            <span class="meaning-num">DESIGN 01</span>
+                            <h3>Mme</h3>
+                            <span class="meaning-en">Mother</span>
+                            <p>Inspired by the wisdom, strength, sacrifice, and nurturing of a mother. A tribute to the woman who held everything together — often without being asked.</p>
+                        </div>
+                    </div>
+                    <div class="meaning-card">
+                        <div class="meaning-img" style="background-image: url('IMG_2139.jpeg');"></div>
+                        <div class="meaning-content">
+                            <span class="meaning-num">DESIGN 02</span>
+                            <h3>Nkgonne</h3>
+                            <span class="meaning-en">Sibling</span>
+                            <p>Sibling love and support — the bond that builds us better, brother and sister. For the ones who walked beside us before the world knew our names.</p>
+                        </div>
+                    </div>
+                    <div class="meaning-card">
+                        <div class="meaning-img" style="background-image: url('tsala.jpg');"></div>
+                        <div class="meaning-content">
+                            <span class="meaning-num">DESIGN 03</span>
+                            <h3>Tsala</h3>
+                            <span class="meaning-en">Friend</span>
+                            <p>Inspired by friendship, individuality, confidence, and modern femininity. More contemporary, youthful, and expressive — for the ones who choose to walk beside you.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="meaning-card">
-                <div class="meaning-img" style="background-image: url('IMG_2139.jpeg');"></div>
-                <div class="meaning-content">
-                    <span class="meaning-num">DESIGN 02</span>
-                    <h3>Nkgonne</h3>
-                    <span class="meaning-en">Sibling</span>
-                    <p>Sibling love and support — the bond that builds us better, brother and sister. For the ones who walked beside us before the world knew our names.</p>
+        </section>
+
+        <!-- ============================================
+             VALUES — KINETIC MANIFESTO
+        ============================================ -->
+        <section class="manifesto">
+
+            <!-- Marquee ticker -->
+            <div class="manifesto-marquee">
+                <div class="marquee-track">
+                    <span>Creativity</span><span class="dot">✦</span>
+                    <span>Botswana Identity</span><span class="dot">✦</span>
+                    <span>Craftsmanship</span><span class="dot">✦</span>
+                    <span>Empowerment</span><span class="dot">✦</span>
+                    <span>Inclusivity</span><span class="dot">✦</span>
+                    <span>Authenticity</span><span class="dot">✦</span>
+                    <span>Excellence</span><span class="dot">✦</span>
+                    <span>Creativity</span><span class="dot">✦</span>
+                    <span>Botswana Identity</span><span class="dot">✦</span>
+                    <span>Craftsmanship</span><span class="dot">✦</span>
+                    <span>Empowerment</span><span class="dot">✦</span>
+                    <span>Inclusivity</span><span class="dot">✦</span>
+                    <span>Authenticity</span><span class="dot">✦</span>
+                    <span>Excellence</span><span class="dot">✦</span>
                 </div>
             </div>
-            <div class="meaning-card">
-                <div class="meaning-img" style="background-image: url('tsala.jpg');"></div>
-                <div class="meaning-content">
-                    <span class="meaning-num">DESIGN 03</span>
-                    <h3>Tsala</h3>
-                    <span class="meaning-en">Friend</span>
-                    <p>Inspired by friendship, individuality, confidence, and modern femininity. More contemporary, youthful, and expressive — for the ones who choose to walk beside you.</p>
+
+            <!-- Header -->
+            <div class="manifesto-header">
+                <span class="section-label">Our Values & Core</span>
+                <h2 class="manifesto-title">What we <em>refuse</em><br>to compromise.</h2>
+            </div>
+
+            <!-- Interactive stack -->
+            <div class="manifesto-stack">
+                <div class="manifesto-item active">
+                    <span class="mi-num">01</span>
+                    <div class="mi-body">
+                        <h3>Creativity & Innovation</h3>
+                        <p>We embrace originality and continuously explore new ideas, designs, and concepts that keep MCS contemporary and relevant.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">02</span>
+                    <div class="mi-body">
+                        <h3>Botswana Identity & Culture</h3>
+                        <p>We draw inspiration from our heritage, people, colours, and culture — using fashion to celebrate and showcase Botswana.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">03</span>
+                    <div class="mi-body">
+                        <h3>Quality & Craftsmanship</h3>
+                        <p>Committed to producing apparel that reflects attention to detail, quality materials, and lasting value.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">04</span>
+                    <div class="mi-body">
+                        <h3>Empowerment</h3>
+                        <p>Inspired by the strength and influence of women. Fashion as a form of identity, confidence, and individuality.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">05</span>
+                    <div class="mi-body">
+                        <h3>Inclusivity</h3>
+                        <p>Fashion for diverse individuals — with collections catering to both women and men, and different lifestyles.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">06</span>
+                    <div class="mi-body">
+                        <h3>Authenticity</h3>
+                        <p>A distinctive MCS identity — never chasing trends. Every collection has a story, purpose, and personality.</p>
+                    </div>
+                </div>
+                <div class="manifesto-item">
+                    <span class="mi-num">07</span>
+                    <div class="mi-body">
+                        <h3>Growth & Excellence</h3>
+                        <p>Continuously improving our designs, business practices, and customer experience.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
- 
-<!-- VALUES — KINETIC MANIFESTO -->
-<section class="manifesto">
 
-    <!-- Marquee ticker -->
-    <div class="manifesto-marquee">
-        <div class="marquee-track">
-            <span>Creativity</span><span class="dot">✦</span>
-            <span>Botswana Identity</span><span class="dot">✦</span>
-            <span>Craftsmanship</span><span class="dot">✦</span>
-            <span>Empowerment</span><span class="dot">✦</span>
-            <span>Inclusivity</span><span class="dot">✦</span>
-            <span>Authenticity</span><span class="dot">✦</span>
-            <span>Excellence</span><span class="dot">✦</span>
-            <!-- duplicate for seamless loop -->
-            <span>Creativity</span><span class="dot">✦</span>
-            <span>Botswana Identity</span><span class="dot">✦</span>
-            <span>Craftsmanship</span><span class="dot">✦</span>
-            <span>Empowerment</span><span class="dot">✦</span>
-            <span>Inclusivity</span><span class="dot">✦</span>
-            <span>Authenticity</span><span class="dot">✦</span>
-            <span>Excellence</span><span class="dot">✦</span>
-        </div>
-    </div>
+            <!-- Closing quote -->
+            <div class="manifesto-quote">
+                <p>"100% Black is not just a colour —<br>it's a culture, a legacy, a power."</p>
+                <span>— MOSADI CLOTHING STUDIOS</span>
+            </div>
 
-    <!-- Interactive stack -->
-    <div class="manifesto-header">
-        <span class="section-label">Our Values & Core</span>
-        <h2 class="manifesto-title">What we <em>refuse</em><br>to compromise.</h2>
-    </div>
+        </section>
 
-    <div class="manifesto-stack">
-        <div class="manifesto-item active">
-            <span class="mi-num">01</span>
-            <div class="mi-body">
-                <h3>Creativity & Innovation</h3>
-                <p>We embrace originality and continuously explore new ideas, designs, and concepts that keep MCS contemporary and relevant.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">02</span>
-            <div class="mi-body">
-                <h3>Botswana Identity & Culture</h3>
-                <p>We draw inspiration from our heritage, people, colours, and culture — using fashion to celebrate and showcase Botswana.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">03</span>
-            <div class="mi-body">
-                <h3>Quality & Craftsmanship</h3>
-                <p>Committed to producing apparel that reflects attention to detail, quality materials, and lasting value.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">04</span>
-            <div class="mi-body">
-                <h3>Empowerment</h3>
-                <p>Inspired by the strength and influence of women. Fashion as a form of identity, confidence, and individuality.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">05</span>
-            <div class="mi-body">
-                <h3>Inclusivity</h3>
-                <p>Fashion for diverse individuals — with collections catering to both women and men, and different lifestyles.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">06</span>
-            <div class="mi-body">
-                <h3>Authenticity</h3>
-                <p>A distinctive MCS identity — never chasing trends. Every collection has a story, purpose, and personality.</p>
-            </div>
-        </div>
-        <div class="manifesto-item">
-            <span class="mi-num">07</span>
-            <div class="mi-body">
-                <h3>Growth & Excellence</h3>
-                <p>Continuously improving our designs, business practices, and customer experience.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Closing quote -->
-    <div class="manifesto-quote">
-        <p>"100% Black is not just a colour —<br>it's a culture, a legacy, a power."</p>
-        <span>— MOSADI CLOTHING STUDIOS</span>
-    </div>
-
-</section>
+        <!-- ============================================
+             CTA SPLIT
+        ============================================ -->
         <section class="cta-split">
-    <div class="cta-bg cta-bg-left" style="background-image: url('IMG_2892%201.jpeg');"></div>
-    <div class="cta-bg cta-bg-right" style="background-image: url('IMG_4097.jpeg');"></div>
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
-        <span class="section-label" style="color: var(--orange);">Join the Movement</span>
-        <h2 class="section-title" style="color: var(--cream); max-width: 800px; margin: 0 auto 40px;">
-            Wear your <em style="color: var(--orange);">heritage</em><br>boldly.
-        </h2>
-        <a href="shop.html" class="btn">Shop the Collection <i class="fas fa-arrow-right"></i></a>
-    </div>
-</section>
+            <div class="cta-bg cta-bg-left" style="background-image: url('IMG_2892%201.jpeg');"></div>
+            <div class="cta-bg cta-bg-right" style="background-image: url('IMG_4097.jpeg');"></div>
+            <div class="cta-overlay"></div>
+            <div class="cta-content">
+                <span class="section-label" style="color: var(--orange);">Join the Movement</span>
+                <h2 class="section-title" style="color: var(--cream); max-width: 800px; margin: 0 auto 40px;">
+                    Wear your <em style="color: var(--orange);">heritage</em><br>boldly.
+                </h2>
+                <a href="shop.html" class="btn">Shop the Collection <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
 
     </main>
 
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -268,13 +294,10 @@
                     <small>STUDIOS · ESTD 2024</small>
                     <p>Where Botswana creativity meets contemporary fashion. Rooted in identity, driven by creativity, designed for the future.</p>
                     <div class="footer-socials">
-                        <a href="https://www.instagram.com/mosadiclothingstudio/3"><i class="fab fa-instagram"></i></a>
- 
-                        <a href="https://www.tiktok.com/@mosadiclothingstudio/video/7630798015929928980"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.facebook.com/61581693073335/"><i class="fab fa-facebook-f"></i></a>
-                       <a href="https://wa.me/26778631810" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i>
-</a>
+                        <a href="https://www.instagram.com/mosadiclothingstudio/3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@mosadiclothingstudio/video/7630798015929928980" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/61581693073335/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/26778631810" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -312,34 +335,39 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
     <!-- ============================================
-     CART DRAWER
-============================================ -->
-<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+         CART DRAWER
+    ============================================ -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 
-<aside class="cart-drawer" id="cart-drawer">
-    <div class="cart-header">
-        <h3>Your Cart</h3>
-        <button onclick="closeCart()" aria-label="Close cart">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <div class="cart-items" id="cart-items">
-        <!-- Auto-filled by main.js -->
-    </div>
-
-    <div class="cart-footer">
-        <div class="cart-total-row">
-            <span>Total</span>
-            <strong id="cart-total">P0.00</strong>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <button class="cart-checkout-btn" onclick="checkoutCart()">
-            <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
-        </button>
-        <p class="cart-note">We'll confirm availability and delivery via WhatsApp</p>
-    </div>
-</aside>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Auto-filled by main.js -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cart-total">P0.00</strong>
+            </div>
+            <button class="cart-checkout-btn" onclick="checkoutCart()">
+                <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+            </button>
+            <p class="cart-note">We'll confirm availability and delivery via WhatsApp</p>
+        </div>
+    </aside>
+
+    <!-- ============================================
+         SCRIPTS
+    ============================================ -->
+    <script src="main.js"></script>
+
 </body>
 </html>
