@@ -1912,3 +1912,52 @@ footer {
     }
     .cart-item-img { width: 70px; height: 88px; }
 }
+/* ============================================
+   PRODUCT BADGE + ADD TO CART
+============================================ */
+.product-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--olive);
+    color: var(--cream);
+    padding: 6px 14px;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.product-add {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cream);
+    color: var(--choc);
+    border: none;
+    padding: 10px 18px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+}
+.product-add i { font-size: 0.7rem; }
+.product-card:hover .product-add {
+    opacity: 1;
+    transform: translateY(0);
+}
+.product-add:hover {
+    background: var(--orange);
+    color: var(--cream);
+}
