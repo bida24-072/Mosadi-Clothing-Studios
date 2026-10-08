@@ -119,7 +119,7 @@ header {
     white-space: nowrap;
 }
 
-.logo-text small {
+.logo-sub {
     font-family: var(--mono);
     font-size: 0.55rem;
     letter-spacing: 0.28em;
@@ -223,7 +223,7 @@ nav a.active::after {
 @media (max-width: 500px) {
     .logo-mark { width: 40px; height: 40px; }
     .logo-name { font-size: 1.3rem; }
-    .logo-text small { font-size: 0.5rem; }
+    .logo-sub { font-size: 0.5rem; }
     nav ul { gap: 14px; }
     nav a { font-size: 0.62rem; letter-spacing: 0.1em; }
 }
@@ -565,9 +565,7 @@ section { padding: 100px 0; }
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
- /* ============================================
-   DESIGN MEANINGS — with images
-============================================ */
+
 .meaning-card {
     background-color: var(--cream-warm);
     border: 1px solid var(--border);
@@ -598,9 +596,6 @@ section { padding: 100px 0; }
     padding: 40px 35px 45px;
     position: relative;
 }
-
-/* Remove the old ::before top-bar — replace with this subtle line */
-.meaning-card::before { display: none; }
 
 .meaning-num {
     font-family: var(--mono);
@@ -682,7 +677,7 @@ section { padding: 100px 0; }
 }
 
 /* ============================================
-   SHOP PAGE
+   PAGE HEADER
 ============================================ */
 .page-header {
     padding: 100px 0 60px;
@@ -705,6 +700,9 @@ section { padding: 100px 0; }
     font-size: 1.05rem;
 }
 
+/* ============================================
+   SHOP PAGE
+============================================ */
 .shop-filters {
     padding: 60px 0 40px;
     display: flex;
@@ -761,20 +759,6 @@ section { padding: 100px 0; }
     transition: transform 1s ease;
 }
 .product-card:hover .product-img img { transform: scale(1.05); }
-
-.product-tag {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: var(--orange);
-    color: var(--cream);
-    padding: 6px 14px;
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 500;
-}
 
 .product-info h3 {
     font-family: var(--serif);
@@ -1000,36 +984,8 @@ footer {
 }
 
 /* ============================================
-   RESPONSIVE
+   CTA SPLIT
 ============================================ */
-@media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-image { min-height: 500px; }
-    .hero-content { padding: 70px 40px; }
-    .story-grid { grid-template-columns: 1fr; gap: 50px; }
-    .collections-grid { grid-template-columns: 1fr; }
-    .collection-card:first-child { grid-row: auto; }
-    .meanings-grid { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
-    .founders-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 700px) {
-    .container { padding: 0 24px; }
-    nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .nav-container { flex-direction: column; gap: 18px; }
-    nav a { font-size: 0.7rem; }
-    section { padding: 70px 0; }
-    .hero-content { padding: 50px 24px; }
-    .hero-stamp { display: none; }
-    .contact-form { padding: 35px 25px; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; text-align: center; }
-    .contact-detail { flex-direction: column; align-items: flex-start; gap: 6px; }
-    .contact-detail .value { text-align: left; }
-}
 .cta-split {
     position: relative;
     min-height: 600px;
@@ -1088,6 +1044,7 @@ footer {
     padding: 0 30px;
     max-width: 900px;
 }
+
 /* ============================================
    VALUES — KINETIC MANIFESTO
 ============================================ */
@@ -1099,9 +1056,6 @@ footer {
     position: relative;
 }
 
-/* ---------------------------------------------
-   MARQUEE TICKER
---------------------------------------------- */
 .manifesto-marquee {
     border-top: 1px solid rgba(239, 231, 217, 0.12);
     border-bottom: 1px solid rgba(239, 231, 217, 0.12);
@@ -1169,9 +1123,6 @@ footer {
     to   { transform: translateX(-50%); }
 }
 
-/* ---------------------------------------------
-   HEADER
---------------------------------------------- */
 .manifesto-header {
     max-width: 1300px;
     margin: 0 auto 70px;
@@ -1193,9 +1144,6 @@ footer {
     color: var(--orange);
 }
 
-/* ---------------------------------------------
-   INTERACTIVE STACK
---------------------------------------------- */
 .manifesto-stack {
     max-width: 1300px;
     margin: 0 auto;
@@ -1289,9 +1237,6 @@ footer {
     color: rgba(239, 231, 217, 0.8);
 }
 
-/* ---------------------------------------------
-   CLOSING QUOTE
---------------------------------------------- */
 .manifesto-quote {
     max-width: 1300px;
     margin: 120px auto 0;
@@ -1319,41 +1264,8 @@ footer {
     color: var(--orange);
 }
 
-/* ---------------------------------------------
-   RESPONSIVE
---------------------------------------------- */
-@media (max-width: 900px) {
-    .manifesto { padding-bottom: 70px; }
-    .manifesto-marquee { padding: 30px 0; margin-bottom: 60px; }
-    .marquee-track { gap: 40px; }
-    .manifesto-header { padding: 0 24px; margin-bottom: 40px; }
-    .manifesto-stack { padding: 0 24px; }
-
-    .manifesto-item {
-        grid-template-columns: 60px 1fr;
-        gap: 20px;
-        padding: 24px 0;
-    }
-    .manifesto-item:hover,
-    .manifesto-item.active {
-        padding: 30px 0 30px 15px;
-    }
-    .manifesto-item::before { left: -24px; }
-    .manifesto-item:hover::before,
-    .manifesto-item.active::before { width: 15px; }
-
-    .mi-body {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .mi-body p {
-        opacity: 1;
-        transform: none;
-    }
-    .manifesto-quote { padding: 0 24px; margin-top: 70px; }
-} 
 /* ============================================
-   PAGE HEADER — AUTO SLIDESHOW
+   PAGE HEADER — SLIDESHOW
 ============================================ */
 .page-header-slideshow {
     position: relative;
@@ -1365,7 +1277,6 @@ footer {
     background-color: var(--choc-deep);
 }
 
-/* ---- SLIDES ---- */
 .ph-slide {
     position: absolute;
     inset: 0;
@@ -1384,7 +1295,6 @@ footer {
     z-index: 2;
 }
 
-/* ---- OVERLAY ---- */
 .ph-overlay {
     position: absolute;
     inset: 0;
@@ -1398,7 +1308,6 @@ footer {
     pointer-events: none;
 }
 
-/* ---- CONTENT ---- */
 .ph-content {
     position: relative;
     z-index: 4;
@@ -1434,7 +1343,6 @@ footer {
     line-height: 1.7;
 }
 
-/* ---- DOTS ---- */
 .ph-dots {
     position: absolute;
     bottom: 40px;
@@ -1464,31 +1372,9 @@ footer {
     width: 56px;
 }
 
-/* ---- RESPONSIVE ---- */
-@media (max-width: 768px) {
-    .page-header-slideshow {
-        min-height: 480px;
-        padding: 80px 24px;
-    }
-    .ph-dots { bottom: 25px; }
-    .ph-dot { width: 24px; }
-    .ph-dot.active { width: 40px; }
-}
-
-/* ---- Respect reduced motion ---- */
-@media (prefers-reduced-motion: reduce) {
-    .ph-slide { transition: opacity 1s ease; }
-    .ph-slide.active { transform: scale(1); }
-    .ph-content { animation: none; }
-}
 /* ============================================
    COLLECTIONS PAGE — 4-Card Grid
 ============================================ */
-.collections-preview {
-    background-color: var(--cream);
-    padding: 100px 0;
-}
-
 .collections-section-header {
     text-align: center;
     max-width: 800px;
@@ -1509,14 +1395,12 @@ footer {
     line-height: 1.7;
 }
 
-/* ---- 4-Card Grid ---- */
 .collections-grid-four {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* ---- Card ---- */
 .collection-card-four {
     display: flex;
     flex-direction: column;
@@ -1533,7 +1417,6 @@ footer {
     border-color: var(--choc);
 }
 
-/* ---- Image ---- */
 .collection-img-four {
     height: 420px;
     background-size: cover;
@@ -1546,7 +1429,6 @@ footer {
     transform: scale(1.04);
 }
 
-/* Small orange accent on top of each image */
 .collection-img-four::after {
     content: '';
     position: absolute;
@@ -1563,22 +1445,11 @@ footer {
     transform: scaleX(1);
 }
 
-/* ---- Info Block ---- */
 .collection-info-four {
     padding: 40px 40px 45px;
     display: flex;
     flex-direction: column;
     flex: 1;
-}
-
-.coll-num {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: var(--orange);
-    display: block;
-    margin-bottom: 18px;
-    font-weight: 500;
 }
 
 .collection-info-four h3 {
@@ -1623,29 +1494,10 @@ footer {
     transform: translateX(8px);
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 900px) {
-    .collections-preview { padding: 70px 0; }
-    .collections-section-header { margin-bottom: 50px; }
-
-    .collections-grid-four {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .collection-img-four { height: 340px; }
-    .collection-info-four { padding: 30px 28px 35px; }
-    .collection-info-four h3 { font-size: 1.7rem; }
-}
-
-@media (max-width: 500px) {
-    .collection-img-four { height: 280px; }
-    .collection-info-four { padding: 25px 22px 30px; }
-    .collection-info-four h3 { font-size: 1.5rem; }
 /* ============================================
    CART SYSTEM
 ============================================ */
 
-/* ---- Cart Icon (in nav) ---- */
 .cart-icon-btn {
     position: relative;
     background: none;
@@ -1679,7 +1531,6 @@ footer {
     line-height: 1;
 }
 
-/* ---- Overlay ---- */
 .cart-overlay {
     position: fixed;
     inset: 0;
@@ -1695,7 +1546,6 @@ footer {
     pointer-events: auto;
 }
 
-/* ---- Drawer ---- */
 .cart-drawer {
     position: fixed;
     top: 0;
@@ -1715,7 +1565,6 @@ footer {
     transform: translateX(0);
 }
 
-/* ---- Header ---- */
 .cart-header {
     display: flex;
     justify-content: space-between;
@@ -1744,14 +1593,12 @@ footer {
     transform: rotate(90deg);
 }
 
-/* ---- Items list ---- */
 .cart-items {
     flex: 1;
     overflow-y: auto;
     padding: 20px 32px;
 }
 
-/* ---- Empty state ---- */
 .cart-empty {
     display: flex;
     flex-direction: column;
@@ -1773,7 +1620,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* ---- Item ---- */
 .cart-item {
     display: grid;
     grid-template-columns: 80px 1fr auto;
@@ -1839,7 +1685,6 @@ footer {
 }
 .cart-item-remove:hover { color: var(--orange); }
 
-/* ---- Footer / checkout ---- */
 .cart-footer {
     padding: 24px 32px 32px;
     border-top: 1px solid var(--border);
@@ -1899,19 +1744,6 @@ footer {
     line-height: 1.5;
 }
 
-/* ---- Mobile ---- */
-@media (max-width: 500px) {
-    .cart-drawer { width: 100vw; }
-    .cart-header { padding: 22px 20px; }
-    .cart-items { padding: 16px 20px; }
-    .cart-footer { padding: 20px; }
-    .cart-total-row strong { font-size: 1.5rem; }
-    .cart-item {
-        grid-template-columns: 70px 1fr auto;
-        gap: 12px;
-    }
-    .cart-item-img { width: 70px; height: 88px; }
-}
 /* ============================================
    PRODUCT BADGE + ADD TO CART
 ============================================ */
@@ -1920,6 +1752,21 @@ footer {
     top: 20px;
     right: 20px;
     background: var(--olive);
+    color: var(--cream);
+    padding: 6px 14px;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.product-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--orange);
     color: var(--cream);
     padding: 6px 14px;
     font-family: var(--mono);
@@ -1960,4 +1807,103 @@ footer {
 .product-add:hover {
     background: var(--orange);
     color: var(--cream);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-image { min-height: 500px; }
+    .hero-content { padding: 70px 40px; }
+    .story-grid { grid-template-columns: 1fr; gap: 50px; }
+    .collections-grid { grid-template-columns: 1fr; }
+    .collection-card:first-child { grid-row: auto; }
+    .meanings-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    .founders-grid { grid-template-columns: 1fr; }
+    .collections-grid-four { grid-template-columns: 1fr; }
+    .collection-img-four { height: 340px; }
+    .collection-info-four { padding: 30px 28px 35px; }
+    .collection-info-four h3 { font-size: 1.7rem; }
+}
+
+@media (max-width: 900px) {
+    .manifesto { padding-bottom: 70px; }
+    .manifesto-marquee { padding: 30px 0; margin-bottom: 60px; }
+    .marquee-track { gap: 40px; }
+    .manifesto-header { padding: 0 24px; margin-bottom: 40px; }
+    .manifesto-stack { padding: 0 24px; }
+
+    .manifesto-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        padding: 24px 0;
+    }
+    .manifesto-item:hover,
+    .manifesto-item.active {
+        padding: 30px 0 30px 15px;
+    }
+    .manifesto-item::before { left: -24px; }
+    .manifesto-item:hover::before,
+    .manifesto-item.active::before { width: 15px; }
+
+    .mi-body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .mi-body p {
+        opacity: 1;
+        transform: none;
+    }
+    .manifesto-quote { padding: 0 24px; margin-top: 70px; }
+}
+
+@media (max-width: 768px) {
+    .page-header-slideshow {
+        min-height: 480px;
+        padding: 80px 24px;
+    }
+    .ph-dots { bottom: 25px; }
+    .ph-dot { width: 24px; }
+    .ph-dot.active { width: 40px; }
+}
+
+@media (max-width: 700px) {
+    .container { padding: 0 24px; }
+    section { padding: 70px 0; }
+    .hero-content { padding: 50px 24px; }
+    .hero-stamp { display: none; }
+    .contact-form { padding: 35px 25px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .contact-detail { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .contact-detail .value { text-align: left; }
+}
+
+@media (max-width: 500px) {
+    .collection-img-four { height: 280px; }
+    .collection-info-four { padding: 25px 22px 30px; }
+    .collection-info-four h3 { font-size: 1.5rem; }
+    .cart-drawer { width: 100vw; }
+    .cart-header { padding: 22px 20px; }
+    .cart-items { padding: 16px 20px; }
+    .cart-footer { padding: 20px; }
+    .cart-total-row strong { font-size: 1.5rem; }
+    .cart-item {
+        grid-template-columns: 70px 1fr auto;
+        gap: 12px;
+    }
+    .cart-item-img { width: 70px; height: 88px; }
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+    .ph-slide { transition: opacity 1s ease; }
+    .ph-slide.active { transform: scale(1); }
+    .ph-content { animation: none; }
 }
