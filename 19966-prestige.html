@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ============================================
+           HERO
+        ============================================ */
         .p-hero {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -93,6 +96,10 @@
             inset: 0;
             background: linear-gradient(to left, transparent 60%, rgba(42, 27, 15, 0.5));
         }
+
+        /* ============================================
+           STORY
+        ============================================ */
         .p-story {
             padding: 120px 0;
             background: #EFE7D9;
@@ -112,10 +119,7 @@
         .p-story-img::after {
             content: '';
             position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
             border: 1px solid rgba(201, 169, 97, 0.4);
         }
         .p-story-text h2 {
@@ -158,72 +162,144 @@
             color: #3D2817;
             font-weight: 500;
         }
-        .p-pieces {
+
+        /* ============================================
+           GALLERY — NEW
+        ============================================ */
+        .p-gallery {
             padding: 120px 0;
             background: #2A1B0F;
             color: #EFE7D9;
         }
-        .p-pieces-header {
+        .p-gallery-header {
             text-align: center;
             margin-bottom: 70px;
         }
-        .p-pieces-header h2 {
+        .p-gallery-header .section-label {
+            color: #C9A961;
+            text-align: center;
+            display: block;
+        }
+        .p-gallery-header h2 {
             font-family: 'Fraunces', serif;
             font-size: clamp(2.2rem, 4.5vw, 3.5rem);
             font-weight: 300;
             color: #EFE7D9;
             letter-spacing: -0.03em;
             line-height: 1;
+            margin-top: 15px;
         }
-        .p-pieces-header h2 em { font-style: italic; font-weight: 700; color: #C9A961; }
-        .p-pieces-grid {
+        .p-gallery-header h2 em {
+            font-style: italic;
+            font-weight: 700;
+            color: #C9A961;
+        }
+
+        /* The masonry-style gallery grid */
+        .p-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        .p-piece {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 280px;
             gap: 20px;
         }
-        .p-piece-img {
-            aspect-ratio: 3/4;
+
+        /* Each gallery item */
+        .p-gallery-item {
             background-size: cover;
             background-position: center;
             position: relative;
             overflow: hidden;
-            transition: transform 0.8s ease;
+            cursor: pointer;
+            transition: transform 0.6s ease;
         }
-        .p-piece:hover .p-piece-img { transform: scale(1.03); }
-        .p-piece-img::after {
+
+        .p-gallery-item::after {
             content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(26, 19, 13, 0.85) 0%,
+                rgba(26, 19, 13, 0.2) 40%,
+                transparent 70%
+            );
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .p-gallery-item:hover::after { opacity: 1; }
+
+        .p-gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Featured spans — big items */
+        .p-gallery-item.tall { grid-row: span 2; }
+        .p-gallery-item.wide { grid-column: span 2; }
+        .p-gallery-item.hero-item { grid-column: span 2; grid-row: span 2; }
+
+        /* Caption on hover */
+        .p-gallery-caption {
             position: absolute;
             bottom: 0;
             left: 0;
-            height: 3px;
-            width: 100%;
-            background: #C9A961;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.6s ease;
+            right: 0;
+            padding: 25px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .p-piece:hover .p-piece-img::after { transform: scaleX(1); }
-        .p-piece-info h3 {
+
+        .p-gallery-item:hover .p-gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .p-gallery-caption h3 {
             font-family: 'Fraunces', serif;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 500;
             color: #EFE7D9;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
-        .p-piece-info span {
+        .p-gallery-caption span {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: #C9A961;
         }
+
+        /* Responsive gallery */
+        @media (max-width: 1024px) {
+            .p-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 240px;
+            }
+        }
+        @media (max-width: 600px) {
+            .p-gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 320px;
+            }
+            .p-gallery-item.hero-item,
+            .p-gallery-item.wide {
+                grid-column: span 1;
+            }
+            .p-gallery-item.tall { grid-row: span 1; }
+
+            /* On mobile, always show captions */
+            .p-gallery-item::after { opacity: 1; }
+            .p-gallery-caption {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================
+           QUOTE
+        ============================================ */
         .p-quote {
             padding: 140px 40px;
             background: #EFE7D9;
@@ -260,6 +336,10 @@
             color: #D8552B;
             position: relative;
         }
+
+        /* ============================================
+           PREV / NEXT
+        ============================================ */
         .p-nav {
             background: #3D2817;
             color: #EFE7D9;
@@ -292,16 +372,15 @@
         }
         .p-nav-title em { font-style: italic; font-weight: 700; color: #C9A961; }
         .p-nav-item.next { text-align: right; }
+
         @media (max-width: 1024px) {
             .p-hero { grid-template-columns: 1fr; }
             .p-hero-visual { min-height: 500px; }
             .p-hero-text { padding: 70px 40px; }
             .p-story-grid { grid-template-columns: 1fr; gap: 50px; }
-            .p-pieces-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
         }
         @media (max-width: 600px) {
             .p-hero-text { padding: 50px 24px; }
-            .p-pieces-grid { grid-template-columns: 1fr; }
             .p-nav { grid-template-columns: 1fr; }
             .p-nav-item:first-child { border-right: none; border-bottom: 1px solid rgba(239, 231, 217, 0.1); }
             .p-nav-item.next { text-align: left; }
@@ -351,6 +430,7 @@
 
     <main>
 
+        <!-- HERO -->
         <section class="p-hero">
             <div class="p-hero-text">
                 <span class="p-hero-eyebrow">Collection 01 · 2024</span>
@@ -361,6 +441,7 @@
             <div class="p-hero-visual" style="background-image: url('IMG_2333%20(1).jpeg');"></div>
         </section>
 
+        <!-- STORY -->
         <section class="p-story">
             <div class="container p-story-grid">
                 <div class="p-story-img" style="background-image: url('IMG_4097.jpeg');"></div>
@@ -392,43 +473,88 @@
             </div>
         </section>
 
-        <section class="p-pieces">
+        <!-- GALLERY — NEW -->
+        <section class="p-gallery">
             <div class="container">
-                <div class="p-pieces-header">
-                    <span class="section-label" style="color: #C9A961; display: block; text-align: center;">Featured Pieces</span>
-                    <h2>From the <em>collection.</em></h2>
+                <div class="p-gallery-header">
+                    <span class="section-label">The Collection · Gallery</span>
+                    <h2>Every piece. <em>Every detail.</em></h2>
                 </div>
-                <div class="p-pieces-grid">
-                    <a href="shop.html" class="p-piece">
-                        <div class="p-piece-img" style="background-image: url('IMG_2333%20(1).jpeg');"></div>
-                        <div class="p-piece-info">
-                            <h3>1966 Prestige Tee</h3>
-                            <span>Independence Edition</span>
+
+                <div class="p-gallery-grid">
+
+                    <!-- Hero image — 2x2 -->
+                    <div class="p-gallery-item hero-item" style="background-image: url('IMG_2333%20(1).jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>1966 Prestige — Hero Look</h3>
+                            <span>Collection Signature</span>
                         </div>
-                    </a>
-                    <a href="shop.html" class="p-piece">
-                        <div class="p-piece-img" style="background-image: url('IMG_4097.jpeg');"></div>
-                        <div class="p-piece-info">
+                    </div>
+
+                    <!-- Tall images -->
+                    <div class="p-gallery-item tall" style="background-image: url('IMG_4097.jpeg');">
+                        <div class="p-gallery-caption">
                             <h3>Heritage Hoodie</h3>
                             <span>Signature Cut</span>
                         </div>
-                    </a>
-                    <a href="shop.html" class="p-piece">
-                        <div class="p-piece-img" style="background-image: url('IMG_2484.jpeg');"></div>
-                        <div class="p-piece-info">
+                    </div>
+
+                    <div class="p-gallery-item tall" style="background-image: url('IMG_2484.jpeg');">
+                        <div class="p-gallery-caption">
                             <h3>Botswana Wide-Leg Set</h3>
                             <span>Full Look</span>
                         </div>
-                    </a>
+                    </div>
+
+                    <!-- Standard images -->
+                    <div class="p-gallery-item" style="background-image: url('IMG_2139.jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>Headwrap Artwork Tee</h3>
+                            <span>Graphic Series</span>
+                        </div>
+                    </div>
+
+                    <div class="p-gallery-item" style="background-image: url('IMG_2892%201.jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>Botswana Map Print</h3>
+                            <span>Signature Motif</span>
+                        </div>
+                    </div>
+
+                    <!-- Wide image -->
+                    <div class="p-gallery-item wide" style="background-image: url('4416da8b-ba6a-4929-ac47-141d7ac9fdd6.jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>Independence Edition Set</h3>
+                            <span>Full Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- More standard images -->
+                    <div class="p-gallery-item" style="background-image: url('IMG_2333%20(2).jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>Hand-Drawn Patterns</h3>
+                            <span>Detail Shot</span>
+                        </div>
+                    </div>
+
+                    <div class="p-gallery-item" style="background-image: url('IMG_2139.jpeg');">
+                        <div class="p-gallery-caption">
+                            <h3>Prestige Cap</h3>
+                            <span>Accessories</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- QUOTE -->
         <section class="p-quote">
             <p>"100% Black is not just a colour — it's a culture, a legacy, a power. Rooted in history. Rising in strength."</p>
             <span>— Mosadi Clothing Studios</span>
         </section>
 
+        <!-- PREV / NEXT -->
         <section class="p-nav">
             <a href="heritage-collection.html" class="p-nav-item">
                 <span class="p-nav-label">← Previous Collection</span>
@@ -507,4 +633,4 @@
 
     <script src="main.js"></script>
 </body>
-</html> 
+</html>
