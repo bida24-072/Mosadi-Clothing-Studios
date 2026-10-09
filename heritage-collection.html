@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Collection | Mosadi Clothing Studios</title>
+    <meta name="description" content="Heritage Collection — A tribute to Botswana's roots. Traditional patterns, modern craftsmanship.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .h-hero {
+            position: relative;
+            height: 92vh;
+            min-height: 640px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .h-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(42, 27, 15, 0.85) 0%,
+                rgba(42, 27, 15, 0.55) 50%,
+                rgba(42, 27, 15, 0.3) 100%
+            );
+        }
+        .h-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 640px;
+            padding: 0 80px;
+            color: #EFE7D9;
+            animation: hFadeUp 1.4s ease both;
+        }
+        @keyframes hFadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .h-hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #E0A458;
+            margin-bottom: 40px;
+        }
+        .h-hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: #E0A458;
+        }
+        .h-hero-content h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(3.5rem, 7vw, 7rem);
+            font-weight: 300;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            color: #EFE7D9;
+            margin-bottom: 30px;
+        }
+        .h-hero-content h1 em {
+            font-style: italic;
+            font-weight: 700;
+            color: #E0A458;
+        }
+        .h-hero-content p {
+            font-size: 1.05rem;
+            color: rgba(239, 231, 217, 0.85);
+            max-width: 480px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .h-hero-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #E0A458;
+            padding-top: 30px;
+            border-top: 1px solid rgba(224, 164, 88, 0.3);
+        }
+        .h-story {
+            padding: 140px 0;
+            background: #F5EEE1;
+            position: relative;
+            overflow: hidden;
+        }
+        .h-story::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(224, 164, 88, 0.15), transparent 70%);
+        }
+        .h-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+        .h-story-img {
+            aspect-ratio: 4/5;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .h-story-img::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(224, 164, 88, 0.5);
+        }
+        .h-story-text h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: #3D2817;
+            margin-bottom: 30px;
+        }
+        .h-story-text h2 em { font-style: italic; font-weight: 700; color: #C5683A; }
+        .h-story-text p {
+            font-size: 1.05rem;
+            color: #3D2817;
+            opacity: 0.85;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .h-values {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(61, 40, 23, 0.15);
+        }
+        .h-value {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .h-value-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #C5683A;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .h-value-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            color: #3D2817;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .h-pieces {
+            padding: 140px 0;
+            background: #EFE7D9;
+        }
+        .h-pieces-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .h-pieces-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 300;
+            color: #3D2817;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .h-pieces-header h2 em { font-style: italic; font-weight: 700; color: #C5683A; }
+        .h-pieces-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .h-piece {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .h-piece-img {
+            aspect-ratio: 3/4;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.8s ease;
+        }
+        .h-piece:hover .h-piece-img { transform: scale(1.03); }
+        .h-piece-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: #C5683A;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        .h-piece:hover .h-piece-img::after { transform: scaleX(1); }
+        .h-piece-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #3D2817;
+            margin-bottom: 6px;
+        }
+        .h-piece-info span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C5683A;
+        }
+        .h-quote {
+            padding: 140px 40px;
+            background: #2A1B0F;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .h-quote::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(224, 164, 88, 0.15), transparent 70%);
+        }
+        .h-quote p {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            line-height: 1.4;
+            color: #EFE7D9;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+        .h-quote p em { color: #E0A458; }
+        .h-quote span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #E0A458;
+            position: relative;
+        }
+        .h-nav {
+            background: #3D2817;
+            color: #EFE7D9;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .h-nav-item {
+            padding: 70px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.4s ease;
+        }
+        .h-nav-item:first-child { border-right: 1px solid rgba(239, 231, 217, 0.1); }
+        .h-nav-item:hover { background: #2A1B0F; }
+        .h-nav-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #E0A458;
+        }
+        .h-nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            font-weight: 400;
+            color: #EFE7D9;
+        }
+        .h-nav-title em { font-style: italic; font-weight: 700; color: #E0A458; }
+        .h-nav-item.next { text-align: right; }
+        @media (max-width: 1024px) {
+            .h-hero-content { padding: 0 40px; }
+            .h-story-grid { grid-template-columns: 1fr; gap: 50px; }
+            .h-pieces-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        }
+        @media (max-width: 600px) {
+            .h-hero-content { padding: 0 24px; }
+            .h-pieces-grid { grid-template-columns: 1fr; }
+            .h-nav { grid-template-columns: 1fr; }
+            .h-nav-item:first-child { border-right: none; border-bottom: 1px solid rgba(239, 231, 217, 0.1); }
+            .h-nav-item.next { text-align: left; }
+            .h-values { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="IMG-20261004-WA0045.jpg" alt="Mosadi Clothing Studios" class="logo-mark">
+                <div class="logo-text">
+                    <div class="logo-name">Mosadi</div>
+                    <div class="logo-sub">CLOTHING STUDIOS</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="collections.html" class="active">Collections <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="1966-prestige.html"><span class="dropdown-num">01</span> 1966 Prestige</a>
+                            <a href="seetebosigo.html"><span class="dropdown-num">02</span> Seetebosigo</a>
+                            <a href="debut-collection.html"><span class="dropdown-num">03</span> Debut Collection</a>
+                            <a href="heritage-collection.html"><span class="dropdown-num">04</span> Heritage Collection</a>
+                        </div>
+                    </li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="h-hero" style="background-image: url('IMG_2484.jpeg');">
+            <div class="h-hero-content">
+                <span class="h-hero-eyebrow">Collection 04 · 2024</span>
+                <h1>Heritage<br><em>Collection.</em></h1>
+                <p>A tribute to Botswana's roots — traditional patterns, earthy tones, and modern craftsmanship woven into contemporary silhouettes.</p>
+                <p class="h-hero-tag">Where heritage meets craft · Mosadi Clothing Studios</p>
+            </div>
+        </section>
+
+        <section class="h-story">
+            <div class="container h-story-grid">
+                <div class="h-story-img" style="background-image: url('IMG_2139.jpeg');"></div>
+                <div class="h-story-text">
+                    <span class="section-label">The Story</span>
+                    <h2>Woven from <em>our roots.</em></h2>
+                    <p>The Heritage Collection draws from Botswana's cultural fabric — patterns, colours, and symbols that have told our story for generations.</p>
+                    <p>Every piece is a chapter. Every thread is a tribute. We merge modern fashion with elements of our culture and identity, creating pieces that are not only fashionable, but meaningful.</p>
+                    <p>This is where MCS seeks to merge modern fashion with elements of our culture and identity — celebrating Botswana talent, creativity and originality on both a local and international platform.</p>
+
+                    <div class="h-values">
+                        <div class="h-value">
+                            <span class="h-value-num">01</span>
+                            <span class="h-value-text">Botswana Identity & Culture</span>
+                        </div>
+                        <div class="h-value">
+                            <span class="h-value-num">02</span>
+                            <span class="h-value-text">Quality & Craftsmanship</span>
+                        </div>
+                        <div class="h-value">
+                            <span class="h-value-num">03</span>
+                            <span class="h-value-text">Authenticity</span>
+                        </div>
+                        <div class="h-value">
+                            <span class="h-value-num">04</span>
+                            <span class="h-value-text">Growth & Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-pieces">
+            <div class="container">
+                <div class="h-pieces-header">
+                    <span class="section-label" style="display: block; text-align: center;">Featured Pieces</span>
+                    <h2>From the <em>collection.</em></h2>
+                </div>
+                <div class="h-pieces-grid">
+                    <a href="shop.html" class="h-piece">
+                        <div class="h-piece-img" style="background-image: url('IMG_2484.jpeg');"></div>
+                        <div class="h-piece-info">
+                            <h3>Heritage Statement Tee</h3>
+                            <span>Traditional Patterns</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="h-piece">
+                        <div class="h-piece-img" style="background-image: url('IMG_4097.jpeg');"></div>
+                        <div class="h-piece-info">
+                            <h3>Heritage Patterned Trousers</h3>
+                            <span>Hand-drawn Motifs</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="h-piece">
+                        <div class="h-piece-img" style="background-image: url('IMG_2333%20(1).jpeg');"></div>
+                        <div class="h-piece-info">
+                            <h3>Heritage Hoodie</h3>
+                            <span>Modern Craft</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-quote">
+            <p>"Our heritage is our <em>crown</em> — wear it boldly."</p>
+            <span>— Mosadi Clothing Studios</span>
+        </section>
+
+        <section class="h-nav">
+            <a href="debut-collection.html" class="h-nav-item">
+                <span class="h-nav-label">← Previous Collection</span>
+                <span class="h-nav-title"><em>Debut Collection</em></span>
+            </a>
+            <a href="1966-prestige.html" class="h-nav-item next">
+                <span class="h-nav-label">Next Collection →</span>
+                <span class="h-nav-title">1966 <em>Prestige</em></span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Mosadi <span>Clothing</span></h3>
+                    <small>STUDIOS · ESTD 2024</small>
+                    <p>Where Botswana creativity meets contemporary fashion. Rooted in identity, driven by creativity, designed for the future.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/mosadiclothingstudio/3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@mosadiclothingstudio/video/7630798015929928980" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/61581693073335/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/26778631810" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="1966-prestige.html">1966 Prestige</a></li>
+                        <li><a href="seetebosigo.html">Seetebosigo</a></li>
+                        <li><a href="debut-collection.html">Debut Collection</a></li>
+                        <li><a href="heritage-collection.html">Heritage Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li>Gaborone, Botswana</li>
+                        <li>+267 78 631 810</li>
+                        <li>empiretwentynine@hotmail.com</li>
+                        <li>Mon–Sat · 9AM–6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 MOSADI CLOTHING STUDIOS</span>
+                <span>ROOTED IN IDENTITY · DRIVEN BY CREATIVITY</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Total</span><strong id="cart-total">P0.00</strong></div>
+            <button class="cart-checkout-btn" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+            <p class="cart-note">We'll confirm availability and delivery on WhatsApp</p>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
