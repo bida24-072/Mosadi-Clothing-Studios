@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debut Collection | Mosadi Clothing Studios</title>
+    <meta name="description" content="Debut Collection — Where Mosadi began. The very first line.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .d-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 92vh;
+            background: #F5EEE1;
+        }
+        .d-hero-visual {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .d-hero-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 40%, rgba(245, 238, 225, 0.4));
+        }
+        .d-hero-text {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            color: #3D2817;
+        }
+        .d-hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #D8552B;
+            margin-bottom: 40px;
+        }
+        .d-hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: #D8552B;
+        }
+        .d-hero-text h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(3.5rem, 7vw, 7rem);
+            font-weight: 300;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            color: #3D2817;
+            margin-bottom: 30px;
+        }
+        .d-hero-text h1 em {
+            font-style: italic;
+            font-weight: 700;
+            color: #D8552B;
+        }
+        .d-hero-text p {
+            font-size: 1.05rem;
+            color: #3D2817;
+            opacity: 0.8;
+            max-width: 480px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .d-hero-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #8A7B6B;
+            padding-top: 30px;
+            border-top: 1px solid rgba(61, 40, 23, 0.15);
+        }
+        .d-story {
+            padding: 140px 0;
+            background: #EFE7D9;
+        }
+        .d-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .d-story-text h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: #3D2817;
+            margin-bottom: 30px;
+        }
+        .d-story-text h2 em { font-style: italic; font-weight: 700; color: #D8552B; }
+        .d-story-text p {
+            font-size: 1.05rem;
+            color: #3D2817;
+            opacity: 0.85;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .d-story-img {
+            aspect-ratio: 4/5;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .d-story-img::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(61, 40, 23, 0.15);
+        }
+        .d-pieces {
+            padding: 120px 0;
+            background: #F5EEE1;
+        }
+        .d-pieces-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .d-pieces-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 300;
+            color: #3D2817;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .d-pieces-header h2 em { font-style: italic; font-weight: 700; color: #D8552B; }
+        .d-pieces-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .d-piece {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #EFE7D9;
+            padding: 20px;
+            transition: transform 0.5s ease;
+        }
+        .d-piece:hover { transform: translateY(-6px); }
+        .d-piece-img {
+            aspect-ratio: 3/4;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .d-piece-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: #D8552B;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        .d-piece:hover .d-piece-img::after { transform: scaleX(1); }
+        .d-piece-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #3D2817;
+            margin-bottom: 6px;
+        }
+        .d-piece-info span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #D8552B;
+        }
+        .d-quote {
+            padding: 140px 40px;
+            background: #3D2817;
+            color: #EFE7D9;
+            text-align: center;
+        }
+        .d-quote p {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            line-height: 1.4;
+            color: #EFE7D9;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            letter-spacing: -0.02em;
+        }
+        .d-quote p em { color: #D8552B; }
+        .d-quote span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #D8552B;
+        }
+        .d-nav {
+            background: #F5EEE1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid rgba(61, 40, 23, 0.15);
+        }
+        .d-nav-item {
+            padding: 70px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.4s ease;
+        }
+        .d-nav-item:first-child { border-right: 1px solid rgba(61, 40, 23, 0.15); }
+        .d-nav-item:hover { background: #EFE7D9; }
+        .d-nav-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #D8552B;
+        }
+        .d-nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            font-weight: 400;
+            color: #3D2817;
+        }
+        .d-nav-title em { font-style: italic; font-weight: 700; color: #D8552B; }
+        .d-nav-item.next { text-align: right; }
+        @media (max-width: 1024px) {
+            .d-hero { grid-template-columns: 1fr; }
+            .d-hero-visual { min-height: 500px; }
+            .d-hero-text { padding: 70px 40px; }
+            .d-story-grid { grid-template-columns: 1fr; gap: 50px; }
+            .d-pieces-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        }
+        @media (max-width: 600px) {
+            .d-hero-text { padding: 50px 24px; }
+            .d-pieces-grid { grid-template-columns: 1fr; }
+            .d-nav { grid-template-columns: 1fr; }
+            .d-nav-item:first-child { border-right: none; border-bottom: 1px solid rgba(61, 40, 23, 0.15); }
+            .d-nav-item.next { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="IMG-20261004-WA0045.jpg" alt="Mosadi Clothing Studios" class="logo-mark">
+                <div class="logo-text">
+                    <div class="logo-name">Mosadi</div>
+                    <div class="logo-sub">CLOTHING STUDIOS</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="collections.html" class="active">Collections <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="1966-prestige.html"><span class="dropdown-num">01</span> 1966 Prestige</a>
+                            <a href="seetebosigo.html"><span class="dropdown-num">02</span> Seetebosigo</a>
+                            <a href="debut-collection.html"><span class="dropdown-num">03</span> Debut Collection</a>
+                            <a href="heritage-collection.html"><span class="dropdown-num">04</span> Heritage Collection</a>
+                        </div>
+                    </li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="d-hero">
+            <div class="d-hero-visual" style="background-image: url('4416da8b-ba6a-4929-ac47-141d7ac9fdd6.jpeg');"></div>
+            <div class="d-hero-text">
+                <span class="d-hero-eyebrow">Collection 03 · 2024</span>
+                <h1>Debut<br><em>Collection.</em></h1>
+                <p>Where Mosadi began. The very first line — a celebration of women, craft, and the unmistakable Mosadi silhouette that started it all.</p>
+                <p class="d-hero-tag">Simple · Bold · Botswana — every piece from this collection carries the DNA of who we are.</p>
+            </div>
+        </section>
+
+        <section class="d-story">
+            <div class="container d-story-grid">
+                <div class="d-story-text">
+                    <span class="section-label">The Story</span>
+                    <h2>Where it all <em>began.</em></h2>
+                    <p>The Debut Collection is where Mosadi Clothing Studios started — a celebration of women, craft, and the unmistakable Mosadi silhouette that began it all.</p>
+                    <p>Founded by Lethogonolo Brian Dintwe and Temogo Tale — two friends raised by single mothers — the Debut Collection was created as a tribute to those mothers, and to women everywhere.</p>
+                    <p>Every piece from this collection carries the DNA of who we are. Mosadi celebrates the Motswana woman not only for how she looks, but for who she is, what she carries, what she has overcome and what she represents to the next generation.</p>
+                </div>
+                <div class="d-story-img" style="background-image: url('IMG_2333%20(1).jpeg');"></div>
+            </div>
+        </section>
+
+        <section class="d-pieces">
+            <div class="container">
+                <div class="d-pieces-header">
+                    <span class="section-label" style="display: block; text-align: center;">Featured Pieces</span>
+                    <h2>From the <em>collection.</em></h2>
+                </div>
+                <div class="d-pieces-grid">
+                    <a href="shop.html" class="d-piece">
+                        <div class="d-piece-img" style="background-image: url('4416da8b-ba6a-4929-ac47-141d7ac9fdd6.jpeg');"></div>
+                        <div class="d-piece-info">
+                            <h3>Debut Orange Hoodie</h3>
+                            <span>The Original</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="d-piece">
+                        <div class="d-piece-img" style="background-image: url('IMG_2333%20(1).jpeg');"></div>
+                        <div class="d-piece-info">
+                            <h3>Debut Signature Tee</h3>
+                            <span>Where it Started</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="d-piece">
+                        <div class="d-piece-img" style="background-image: url('IMG_2139.jpeg');"></div>
+                        <div class="d-piece-info">
+                            <h3>Debut Wide-Leg Trousers</h3>
+                            <span>The Silhouette</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-quote">
+            <p>"Mosadi celebrates the Motswana woman not only for how she looks, but for <em>who she is</em>, what she carries, what she has overcome and what she represents to the next generation."</p>
+            <span>— Mosadi Clothing Studios</span>
+        </section>
+
+        <section class="d-nav">
+            <a href="seetebosigo.html" class="d-nav-item">
+                <span class="d-nav-label">← Previous Collection</span>
+                <span class="d-nav-title"><em>Seetebosigo</em></span>
+            </a>
+            <a href="heritage-collection.html" class="d-nav-item next">
+                <span class="d-nav-label">Next Collection →</span>
+                <span class="d-nav-title">Heritage <em>Collection</em></span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Mosadi <span>Clothing</span></h3>
+                    <small>STUDIOS · ESTD 2024</small>
+                    <p>Where Botswana creativity meets contemporary fashion. Rooted in identity, driven by creativity, designed for the future.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/mosadiclothingstudio/3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@mosadiclothingstudio/video/7630798015929928980" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/61581693073335/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/26778631810" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="1966-prestige.html">1966 Prestige</a></li>
+                        <li><a href="seetebosigo.html">Seetebosigo</a></li>
+                        <li><a href="debut-collection.html">Debut Collection</a></li>
+                        <li><a href="heritage-collection.html">Heritage Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li>Gaborone, Botswana</li>
+                        <li>+267 78 631 810</li>
+                        <li>empiretwentynine@hotmail.com</li>
+                        <li>Mon–Sat · 9AM–6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 MOSADI CLOTHING STUDIOS</span>
+                <span>ROOTED IN IDENTITY · DRIVEN BY CREATIVITY</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Total</span><strong id="cart-total">P0.00</strong></div>
+            <button class="cart-checkout-btn" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+            <p class="cart-note">We'll confirm availability and delivery on WhatsApp</p>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
