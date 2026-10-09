@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seetebosigo | Mosadi Clothing Studios</title>
+    <meta name="description" content="Seetebosigo — Every stitch is designed for comfort. Every fit is made to stand out.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .s-hero {
+            position: relative;
+            height: 92vh;
+            min-height: 640px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .s-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(15, 23, 42, 0.7) 0%,
+                rgba(15, 23, 42, 0.45) 45%,
+                rgba(15, 23, 42, 0.9) 100%
+            );
+        }
+        .s-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 40px;
+            color: #F8FAFC;
+            animation: sFadeUp 1.4s ease both;
+        }
+        @keyframes sFadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .s-hero-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: #7DD3FC;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        .s-hero-content h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(3.5rem, 9vw, 8rem);
+            font-weight: 300;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            color: #F8FAFC;
+            margin-bottom: 25px;
+        }
+        .s-hero-content h1 em {
+            font-style: italic;
+            font-weight: 700;
+            color: #7DD3FC;
+        }
+        .s-hero-content p {
+            font-size: 1.1rem;
+            color: rgba(248, 250, 252, 0.85);
+            max-width: 620px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        .s-hero-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .s-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: #7DD3FC;
+            color: #0F172A;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-decoration: none;
+            border: 1px solid #7DD3FC;
+            transition: all 0.4s ease;
+        }
+        .s-btn:hover { background: transparent; color: #7DD3FC; }
+        .s-btn-outline {
+            background: transparent;
+            color: #F8FAFC;
+            border-color: rgba(248, 250, 252, 0.4);
+        }
+        .s-btn-outline:hover { background: #F8FAFC; color: #0F172A; border-color: #F8FAFC; }
+        .s-story {
+            padding: 140px 0;
+            background: #F8FAFC;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .s-story::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(125, 211, 252, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+        .s-story-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+        }
+        .s-story h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: #0F172A;
+            margin-bottom: 40px;
+        }
+        .s-story h2 em { font-style: italic; font-weight: 700; color: #0284C7; }
+        .s-story p {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: #334155;
+            margin-bottom: 22px;
+        }
+        .s-story-divider {
+            width: 60px;
+            height: 2px;
+            background: #7DD3FC;
+            margin: 50px auto;
+        }
+        .s-story-pull {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: #0284C7;
+            line-height: 1.5;
+            margin: 50px 0;
+            letter-spacing: -0.02em;
+        }
+        .s-pieces {
+            padding: 140px 0;
+            background: #E2E8F0;
+        }
+        .s-pieces-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .s-pieces-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: #0F172A;
+        }
+        .s-pieces-header h2 em { font-style: italic; font-weight: 700; color: #0284C7; }
+        .s-pieces-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .s-piece {
+            background: #FFFFFF;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .s-piece:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+        }
+        .s-piece-img {
+            aspect-ratio: 3/4;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .s-piece-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.2), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .s-piece:hover .s-piece-img::after { opacity: 1; }
+        .s-piece-info { padding: 24px 26px 28px; }
+        .s-piece-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0F172A;
+            margin-bottom: 6px;
+        }
+        .s-piece-info span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #0284C7;
+        }
+        .s-quote {
+            padding: 120px 40px;
+            background: #0F172A;
+            color: #F8FAFC;
+            text-align: center;
+        }
+        .s-quote p {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            line-height: 1.4;
+            color: #F8FAFC;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            letter-spacing: -0.02em;
+        }
+        .s-quote p em { color: #7DD3FC; }
+        .s-quote span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #7DD3FC;
+        }
+        .s-nav {
+            background: #F8FAFC;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid #E2E8F0;
+        }
+        .s-nav-item {
+            padding: 70px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.4s ease;
+        }
+        .s-nav-item:first-child { border-right: 1px solid #E2E8F0; }
+        .s-nav-item:hover { background: #E2E8F0; }
+        .s-nav-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #0284C7;
+        }
+        .s-nav-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            font-weight: 400;
+            color: #0F172A;
+        }
+        .s-nav-title em { font-style: italic; font-weight: 700; color: #0284C7; }
+        .s-nav-item.next { text-align: right; }
+        @media (max-width: 1024px) {
+            .s-pieces-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        }
+        @media (max-width: 600px) {
+            .s-hero-content { padding: 0 24px; }
+            .s-story-inner { padding: 0 24px; }
+            .s-pieces-grid { grid-template-columns: 1fr; }
+            .s-nav { grid-template-columns: 1fr; }
+            .s-nav-item:first-child { border-right: none; border-bottom: 1px solid #E2E8F0; }
+            .s-nav-item.next { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="IMG-20261004-WA0045.jpg" alt="Mosadi Clothing Studios" class="logo-mark">
+                <div class="logo-text">
+                    <div class="logo-name">Mosadi</div>
+                    <div class="logo-sub">CLOTHING STUDIOS</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="collections.html" class="active">Collections <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="1966-prestige.html"><span class="dropdown-num">01</span> 1966 Prestige</a>
+                            <a href="seetebosigo.html"><span class="dropdown-num">02</span> Seetebosigo</a>
+                            <a href="debut-collection.html"><span class="dropdown-num">03</span> Debut Collection</a>
+                            <a href="heritage-collection.html"><span class="dropdown-num">04</span> Heritage Collection</a>
+                        </div>
+                    </li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Open cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="s-hero" style="background-image: url('IMG_4097.jpeg');">
+            <div class="s-hero-content">
+                <span class="s-hero-eyebrow">Collection 02 · 2024</span>
+                <h1>Seetebosigo</h1>
+                <p>Every stitch is designed for comfort. Every fit is made to stand out.</p>
+                <div class="s-hero-actions">
+                    <a href="shop.html" class="s-btn">Shop Collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="collections.html" class="s-btn s-btn-outline">All Collections</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-story">
+            <div class="s-story-inner">
+                <span class="section-label" style="color: #0284C7; display: block; text-align: center;">The Collection</span>
+                <h2>Made for the <em>cold.</em></h2>
+                <p>Our Winter Collection combines effortless style with the freedom of movement you deserve — giving you a look that's as comfortable as it is unforgettable.</p>
+                <div class="s-story-divider"></div>
+                <p class="s-story-pull">"Every stitch is designed for comfort.<br>Every fit is made to stand out."</p>
+                <div class="s-story-divider"></div>
+                <p>Made for the cold Gaborone mornings and cool evenings, each piece balances warmth, silhouette, and craft. Layers that move with you. Fits that feel like they were made for your body.</p>
+                <p>Seetebosigo isn't just a season. It's a feeling — the quiet luxury of being warm, being comfortable, and being unmistakably Mosadi.</p>
+            </div>
+        </section>
+
+        <section class="s-pieces">
+            <div class="container">
+                <div class="s-pieces-header">
+                    <span class="section-label" style="color: #0284C7; display: block; text-align: center;">Featured Pieces</span>
+                    <h2>From the <em>collection.</em></h2>
+                </div>
+                <div class="s-pieces-grid">
+                    <a href="shop.html" class="s-piece">
+                        <div class="s-piece-img" style="background-image: url('IMG_4097.jpeg');"></div>
+                        <div class="s-piece-info">
+                            <h3>Seetebosigo Camo Set</h3>
+                            <span>Signature Winter</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="s-piece">
+                        <div class="s-piece-img" style="background-image: url('IMG_2484.jpeg');"></div>
+                        <div class="s-piece-info">
+                            <h3>Winter Puffer Hoodie</h3>
+                            <span>Comfort First</span>
+                        </div>
+                    </a>
+                    <a href="shop.html" class="s-piece">
+                        <div class="s-piece-img" style="background-image: url('IMG_2139.jpeg');"></div>
+                        <div class="s-piece-info">
+                            <h3>Wide-Leg Winter Trousers</h3>
+                            <span>Movement Freedom</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-quote">
+            <p>"100% Black is not just a colour — it's a <em>culture</em>, a <em>legacy</em>, a <em>power</em>. Rooted in history. Rising in strength."</p>
+            <span>— Mosadi Clothing Studios</span>
+        </section>
+
+        <section class="s-nav">
+            <a href="1966-prestige.html" class="s-nav-item">
+                <span class="s-nav-label">← Previous Collection</span>
+                <span class="s-nav-title">1966 <em>Prestige</em></span>
+            </a>
+            <a href="debut-collection.html" class="s-nav-item next">
+                <span class="s-nav-label">Next Collection →</span>
+                <span class="s-nav-title"><em>Debut Collection</em></span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Mosadi <span>Clothing</span></h3>
+                    <small>STUDIOS · ESTD 2024</small>
+                    <p>Where Botswana creativity meets contemporary fashion. Rooted in identity, driven by creativity, designed for the future.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/mosadiclothingstudio/3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@mosadiclothingstudio/video/7630798015929928980" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/61581693073335/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/26778631810" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="1966-prestige.html">1966 Prestige</a></li>
+                        <li><a href="seetebosigo.html">Seetebosigo</a></li>
+                        <li><a href="debut-collection.html">Debut Collection</a></li>
+                        <li><a href="heritage-collection.html">Heritage Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <ul>
+                        <li>Gaborone, Botswana</li>
+                        <li>+267 78 631 810</li>
+                        <li>empiretwentynine@hotmail.com</li>
+                        <li>Mon–Sat · 9AM–6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 MOSADI CLOTHING STUDIOS</span>
+                <span>ROOTED IN IDENTITY · DRIVEN BY CREATIVITY</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Total</span><strong id="cart-total">P0.00</strong></div>
+            <button class="cart-checkout-btn" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+            <p class="cart-note">We'll confirm availability and delivery on WhatsApp</p>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
