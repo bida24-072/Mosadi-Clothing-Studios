@@ -11,14 +11,8 @@
 </head>
 <body>
 
-    <!-- ============================================
-         TOP BAR
-    ============================================ -->
     <div class="top-bar">ESTD 2024 · <strong>MADE IN BOTSWANA</strong> · FREE SHIPPING NATIONWIDE</div>
 
-    <!-- ============================================
-         HEADER
-    ============================================ -->
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -49,9 +43,7 @@
 
     <main>
 
-        <!-- ============================================
-             HERO
-        ============================================ -->
+        <!-- HERO -->
         <section class="hero" style="padding:0;">
             <div class="hero-content">
                 <span class="hero-eyebrow">Founded 2024 · Botswana</span>
@@ -77,9 +69,7 @@
             </div>
         </section>
 
-        <!-- ============================================
-             BRAND STORY
-        ============================================ -->
+        <!-- BRAND STORY -->
         <section class="story">
             <div class="container story-grid">
                 <div class="story-img">
@@ -96,9 +86,7 @@
             </div>
         </section>
 
-        <!-- ============================================
-             COLLECTIONS PREVIEW
-        ============================================ -->
+        <!-- COLLECTIONS PREVIEW -->
         <section class="collections-preview">
             <div class="container">
                 <div class="collections-header">
@@ -130,9 +118,7 @@
             </div>
         </section>
 
-        <!-- ============================================
-             DESIGN MEANINGS
-        ============================================ -->
+        <!-- DESIGN MEANINGS -->
         <section class="meanings">
             <div class="container">
                 <div class="meanings-header">
@@ -173,12 +159,8 @@
             </div>
         </section>
 
-        <!-- ============================================
-             VALUES — KINETIC MANIFESTO
-        ============================================ -->
+        <!-- MANIFESTO -->
         <section class="manifesto">
-
-            <!-- Marquee ticker -->
             <div class="manifesto-marquee">
                 <div class="marquee-track">
                     <span>Creativity</span><span class="dot">✦</span>
@@ -198,13 +180,11 @@
                 </div>
             </div>
 
-            <!-- Header -->
             <div class="manifesto-header">
                 <span class="section-label">Our Values & Core</span>
                 <h2 class="manifesto-title">What we <em>refuse</em><br>to compromise.</h2>
             </div>
 
-            <!-- Interactive stack -->
             <div class="manifesto-stack">
                 <div class="manifesto-item active">
                     <span class="mi-num">01</span>
@@ -257,17 +237,13 @@
                 </div>
             </div>
 
-            <!-- Closing quote -->
             <div class="manifesto-quote">
                 <p>"100% Black is not just a colour —<br>it's a culture, a legacy, a power."</p>
                 <span>— MOSADI CLOTHING STUDIOS</span>
             </div>
-
         </section>
 
-        <!-- ============================================
-             CTA SPLIT
-        ============================================ -->
+        <!-- CTA SPLIT -->
         <section class="cta-split">
             <div class="cta-bg cta-bg-left" style="background-image: url('IMG_2892%201.jpeg');"></div>
             <div class="cta-bg cta-bg-right" style="background-image: url('IMG_4097.jpeg');"></div>
@@ -283,9 +259,6 @@
 
     </main>
 
-    <!-- ============================================
-         FOOTER
-    ============================================ -->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -335,8 +308,28 @@
         </div>
     </footer>
 
-  
-    <script src="main.js"></script>
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cart-total">P0.00</strong>
+            </div>
+            <button class="cart-checkout-btn" onclick="checkoutCart()">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </button>
+            <p class="cart-note">We'll confirm availability and delivery on WhatsApp</p>
+        </div>
+    </aside>
 
+    <script src="main.js"></script>
 </body>
 </html>
