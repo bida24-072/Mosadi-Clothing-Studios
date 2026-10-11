@@ -23,7 +23,8 @@ const products = [
     { id: 15, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2406.jpeg", badge: "New" },
     { id: 16, name: "Signature Bucket Hat — Black", category: "accessories", collection: "Accessories", price: 200, img: "IMG_2338%20(1).jpeg", badge: null },
     { id: 17, name: "Mosadi Bag — Earth", category: "accessories", collection: "Winter Collection", price: 150, img: "IMG_2329.jpeg", badge: null },
-    { id: 18, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null }
+    { id: 18, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null },
+    { id: 19, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2986.jpeg", badge: null }
 ];
 
 /* ============================================
