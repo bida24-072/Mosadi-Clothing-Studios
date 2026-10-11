@@ -8,6 +8,7 @@
 const products = [
     { id: 1, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226.jpeg", badge: "Best Seller" },
     { id: 2, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_5121.jpeg", badge: null },
+    { id: 2, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_2138%20(1).jpeg", badge: null },
    { id: 3, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "IMG_3033.jpeg", badge: null },
     { id: 4, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_4068.jpeg", badge: null },
     { id: 5, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_3181.jpeg", badge: null },
