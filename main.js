@@ -7,14 +7,14 @@
 ============================================ */
 const products = [
    { id: 1, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226.jpeg", badge: "Best Seller" },
-   { id: 2, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226%20(2).jpeg", badge: "Best Seller" },
+   { id: 2, name: "Seetebosigo — Black Hoodies", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226%20(2).jpeg", badge: "Best Seller" },
     { id: 3, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_5121.jpeg", badge: null },
     { id: 4, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_2340%20(1).jpeg", badge: null },
     { id: 5, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_2138%20(1).jpeg", badge: null },
    { id: 6, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "IMG_3033.jpeg", badge: null },
     { id: 7, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_4068.jpeg", badge: null },
     { id: 8, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_3181.jpeg", badge: null },
-    { id: 9, name: "Tsala Wide-Leg Trousers — Black", category: "trousers", collection: "Signature", price: 500, img: "https://IMG_4081.jpeg", badge: null },
+    { id: 9, name: "Tsala Wide-Leg Trousers — Black", category: "trousers", collection: "Signature", price: 500, img: "IMG_4081.jpeg", badge: null },
     { id: 10, name: "Botswana 1966 Tee — Deep Green", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_2327%20(1).jpeg", badge: null },
    { id: 11, name: "Mme Sweater — Burnt Orange", category: "hoodies", collection: "Signature", price: 780, img: "IMG_2339%20(1).jpeg", badge: null },
     { id: 12, name: "Mosadi Tote Bag — Natural", category: "accessories", collection: "Accessories", price: 550, img: "IMG_2329.jpeg", badge: null },
