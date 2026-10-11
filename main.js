@@ -8,18 +8,18 @@
 const products = [
     { id: 1, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226.jpeg", badge: "Best Seller" },
     { id: 2, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_5121.jpeg", badge: null },
-   { id: 2, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "IMG_3033.jpeg", badge: null },
-    { id: 3, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_4068.jpeg", badge: null },
-    { id: 4, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_3181.jpeg", badge: null },
-    { id: 5, name: "Botswana 1966 Tee — Deep Green", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_2327%20(1).jpeg", badge: null },
-   { id: 8, name: "Mme Sweater — Burnt Orange", category: "hoodies", collection: "Signature", price: 780, img: "IMG_2339%20(1).jpeg", badge: null },
-    { id: 9, name: "Mosadi Tote Bag — Natural", category: "accessories", collection: "Accessories", price: 550, img: "IMG_2329.jpeg", badge: null },
-    { id: 10, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_3031.jpeg", badge: "New" },
+   { id: 3, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "IMG_3033.jpeg", badge: null },
+    { id: 4, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_4068.jpeg", badge: null },
+    { id: 5, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_3181.jpeg", badge: null },
+    { id: 6, name: "Botswana 1966 Tee — Deep Green", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_2327%20(1).jpeg", badge: null },
+   { id: 7, name: "Mme Sweater — Burnt Orange", category: "hoodies", collection: "Signature", price: 780, img: "IMG_2339%20(1).jpeg", badge: null },
+    { id: 8, name: "Mosadi Tote Bag — Natural", category: "accessories", collection: "Accessories", price: 550, img: "IMG_2329.jpeg", badge: null },
+    { id: 9, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_3031.jpeg", badge: "New" },
     { id: 10, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2893.jpeg", badge: "New" },
-    { id: 10, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2406.jpeg", badge: "New" },
-    { id: 11, name: "Signature Bucket Hat — Black", category: "accessories", collection: "Accessories", price: 200, img: "IMG_2338%20(1).jpeg", badge: null },
-    { id: 12, name: "Mosadi Bag — Earth", category: "accessories", collection: "Winter Collection", price: 150, img: "IMG_2329.jpeg", badge: null },
-    { id: 13, name: "Mosadi Vest — Khaki", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null }
+    { id: 11, name: "Mosadi Full Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2406.jpeg", badge: "New" },
+    { id: 12, name: "Signature Bucket Hat — Black", category: "accessories", collection: "Accessories", price: 200, img: "IMG_2338%20(1).jpeg", badge: null },
+    { id: 13, name: "Mosadi Bag — Earth", category: "accessories", collection: "Winter Collection", price: 150, img: "IMG_2329.jpeg", badge: null },
+    { id: 14, name: "Mosadi Vest — Khaki", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null }
 ];
 
 /* ============================================
