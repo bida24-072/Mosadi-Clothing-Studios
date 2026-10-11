@@ -7,7 +7,7 @@
 ============================================ */
 const products = [
    { id: 1, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226.jpeg", badge: "Best Seller" },
-   { id: 2, name: "Seetebosigo — Black Hoodies", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226%20(2).jpeg", badge: "Best Seller" },
+   { id: 2, name: "Seetebosigo — Black Hoodies", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_3176%20(1).jpeg", badge: "Best Seller" },
     { id: 3, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_5121.jpeg", badge: null },
     { id: 4, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_2340%20(1).jpeg", badge: null },
     { id: 5, name: "Mme Embroidered Tee — White", category: "tshirts", collection: "Signature", price: 399, img: "IMG_2138%20(1).jpeg", badge: null },
