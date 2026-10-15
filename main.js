@@ -37,7 +37,7 @@ const products = [
     { id: 29, name: "Signature Bucket Hat — Black", category: "accessories", collection: "Accessories", price: 200, img: "IMG_2338%20(1).jpeg", badge: null },
     { id: 30, name: "Mosadi Bag — Earth", category: "accessories", collection: "Winter Collection", price: 150, img: "IMG_2329.jpeg", badge: null },
     { id: 31, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null },
-    { id: 32, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: ".jpeg", badge: null },
+    { id: 32, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "(Upload-from-mobile-1792032606)13F61561-824B-400C-B23E-D3C59885C121.jpeg", badge: null },
     { id: 33, name: "Mosadi Vest ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2986.jpeg", badge: null }
 ];
 
