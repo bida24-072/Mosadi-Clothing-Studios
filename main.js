@@ -23,7 +23,7 @@ const products = [
    { id: 11, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "(Upload-from-mobile-1792030209)2A370DA4-0FB0-4BCB-B7FA-03A7B979E419.jpeg", badge: null },
    { id: 11, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "(Upload-from-mobile-1792030209)44A36344-BDA9-4C2B-869C-290241738BD7.jpeg", badge: null },
    { id: 11, name: "Mme Embroidered Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "(Upload-from-mobile-1792030209)F9002B3F-E85D-495D-8E5D-109797600063.jpeg", badge: null },
-    { id: 12, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_4068.jpeg", badge: null },
+    { id: 12, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "(Upload-from-mobile-1792032095)BD928918-A8CE-430B-8304-817053C61932.jpeg", badge: null },
     { id: 13, name: "Tsala Wide-Leg Trousers — Cream", category: "trousers", collection: "Signature", price: 500, img: "IMG_3181.jpeg", badge: null },
     { id: 14, name: "Tsala Wide-Leg Trousers — Black", category: "trousers", collection: "Signature", price: 500, img: "IMG_4081.jpeg", badge: null },
     { id: 14, name: "Tsala Wide-Leg Trousers — Black", category: "trousers", collection: "Signature", price: 500, img: "(Upload-from-mobile-1792030570)827C2AD9-0F59-48F6-91DF-066F9A899072.jpeg", badge: null },
