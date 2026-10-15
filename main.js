@@ -8,7 +8,7 @@
 const products = [
    { id: 1, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_4226.jpeg", badge: "Best Seller" },
    { id: 2, name: "Seetebosigo — Khaki,Green Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "IMG_3176%20(1).jpeg", badge: "Best Seller" },
-    { id: 3, name: "Seetebosigo — Khaki,Grey Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "(Upload-from-mobile-1792027964)68F36A35-CA6E-47C7-A13A-5C4D4549B828.jpeg", badge: "Best Seller" },
+    { id: 3, name: "Seetebosigo — Grey Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "(Upload-from-mobile-1792027964)68F36A35-CA6E-47C7-A13A-5C4D4549B828.jpeg", badge: "Best Seller" },
      { id: 4, name: "Seetebosigo — Orange Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "(Upload-from-mobile-1792027964)AF657FAB-39E7-48B9-85FD-C6B44A703530.jpeg", badge: "Best Seller" },
      { id: 5, name: "Seetebosigo — Black Sweater Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "(Upload-from-mobile-1792027964)F6A3FD19-1B8F-42D1-8A6A-379DBEB9B915.jpeg", badge: "Best Seller" },
      { id: 6, name: "Seetebosigo — Black Hoodie", category: "hoodies", collection: "1966 Prestige", price: 550, img: "(Upload-from-mobile-1792028043)3C668DD0-0075-46DB-A1C9-E2E9D59E0788.jpeg", badge: "Best Seller" },
