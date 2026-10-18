@@ -31,7 +31,7 @@ const products = [
     { id: 23, name: "1966 Prestige Tee — Deep Green", category: "tshirts", collection: "1966 Prestige", price: 399, img: "(Upload-from-mobile-1792032389)127980D5-AFFC-4F26-B209-361B22910A36.jpeg", badge: null },
    { id: 24, name: "Mosadi Thari Sweater — Burnt Orange", category: "hoodies", collection: "Signature", price: 550, img: "IMG_2339%20(1).jpeg", badge: null },
     { id: 25, name: "Mosadi luxury Drawstring Bag — Natural", category: "accessories", collection: "Accessories", price: 150, img: "IMG_2329.jpeg", badge: null },
-    { id: 26, name: "Mosadi Full Set--Pants+Tshirt", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_3031.jpeg", badge: "New" },
+    { id: 26, name: "Mosadi Full Set--Pants+Tshirt", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2333%20(1).jpeg", badge: "New" },
     { id: 27, name: "Mosadi heritage full-Set", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2893.jpeg", badge: "New" },
     { id: 28, name: "Mosadi Full Set Pants+Tshirt", category: "sets", collection: "1966 Prestige", price: 900, img: "IMG_2406.jpeg", badge: "New" },
     { id: 29, name: "Signature Bucket Hat — Orange", category: "accessories", collection: "Accessories", price: 200, img: "IMG_2338%20(1).jpeg", badge: null },
