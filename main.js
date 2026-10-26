@@ -36,7 +36,7 @@ const products = [
     { id: 28, name: "Mosadi Full-Set", category: "sets", collection: " Pants+Tshirts", price: 900, img: "IMG_2893.jpeg", badge: "New" },
     { id: 29, name: "Mosadi Full Set", category: "sets", collection: "heritage", price: 900, img: "IMG_2406.jpeg", badge: "New" },
     { id: 30, name: "Mosadi luxury Drawstring Bag — Natural", category: "accessories", collection: "Accessories", price: 150, img: "IMG_2329.jpeg", badge: null },
-    { id: 31, name: "Mosadi Drawstring Bag - Green ", category: "accessories", collection: "Accessories", price: 150, img: "", badge: null },
+    { id: 31, name: "Mosadi Drawstring Bag - Green ", category: "accessories", collection: "Accessories", price: 150, img: "988604A0-7B46-4AB0-AB57-4ED9B790A120.jpeg", badge: null },
     { id: 32, name: "Mosadi Tote Bag - Brown ", category: "accessories", collection: "Accessories", price: 150, img: "03FBE2F0-1F1A-480D-9668-0437EBBCD239.jpeg", badge: null },
   { id: 33, name: "Mosadi Vest - Cream ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2986.jpeg", badge: null },
     { id: 34, name: "Mosadi Vest - White ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null },
