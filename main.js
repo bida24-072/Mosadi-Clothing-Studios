@@ -38,7 +38,7 @@ const products = [
     { id: 30, name: "Mosadi Vest - White ", category: "accessories", collection: "Accessories", price: 280, img: "IMG_2336%20(2).jpeg", badge: null },
      { id: 31, name: "Mosadi Drawstring Bag - Green ", category: "accessories", collection: "Accessories", price: 150, img: "03FBE2F0-1F1A-480D-9668-0437EBBCD239.jpeg", badge: null },
      { id: 32, name: "Mosadi Tote Bag - Brown ", category: "accessories", collection: "Accessories", price: 150, img: "07A76F27-491A-4F5D-876D-747C626CA5CC.jpeg", badge: null },
-     { id: 33, name: "Mosadi Bucket Hat - Black ", category: "accessories", collection: "Accessories", price: 150, img: "58F85711-F559-44C5-9E40-2FFD4A6E0B6F.jpeg", badge: null },
+     { id: 33, name: "Mosadi Bucket Hat - Black ", category: "accessories", collection: "Accessories", price: 200, img: "58F85711-F559-44C5-9E40-2FFD4A6E0B6F.jpeg", badge: null },
      { id: 34, name: "1966 Prestige Vest - Black ", category: "accessories", collection: "Accessories", price: 280, img: "988604A0-7B46-4AB0-AB57-4ED9B790A120.jpeg", badge: null },
 
     { id: 36, name: "Mosadi Vest - Black ", category: "accessories", collection: "Accessories", price: 280, img: "(Upload-from-mobile-1792032606)13F61561-824B-400C-B23E-D3C59885C121.jpeg", badge: null },
