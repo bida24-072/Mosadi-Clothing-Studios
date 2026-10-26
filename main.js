@@ -16,7 +16,7 @@ const products = [
     { id: 8, name: "Mosadi oversized Tee — White", category: "tshirts", collection: "Debut", price: 399, img: "IMG_5121.jpeg", badge: null },
     { id: 9, name: "1966 Prestige Tee — White", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_2340%20(1).jpeg", badge: null },
     { id: 10, name: "Thari Tee — White", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_2138%20(1).jpeg", badge: null },
-   { id: 11, name: "1966 Prestige Tee — Black", category: "trousers", collection: "1966 Prestige", price: 399, img: "IMG_3033.jpeg", badge: null },
+   { id: 11, name: "1966 Prestige Tee — Black", category: "tshirts", collection: "1966 Prestige", price: 399, img: "IMG_3033.jpeg", badge: null },
    { id: 12, name: "Mosadi oversized Pants — Black", category: "trousers", collection: "Signature", price: 500, img: "(Upload-from-mobile-1792030157)49AEE730-1286-4262-8599-9FF4AF23F461.jpeg", badge: null },
    { id: 13, name: "Mosadi oversized Tee — Black", category: "tshirts", collection: "Signature", price: 399, img: "(Upload-from-mobile-1792030157)4C3F3A13-85CA-43C4-A5DB-FD48CB98D4B4.jpeg", badge: null },
    { id: 14, name: "Mosadi oversized Tee — Brown", category: "tshirts", collection: "1966 Prestige", price: 399, img: "(Upload-from-mobile-1792030157)D924D41B-CCB8-44D0-858A-06FC07FD560E.jpeg", badge: null },
