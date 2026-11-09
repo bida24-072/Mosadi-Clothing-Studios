@@ -16,7 +16,7 @@ Mosadi Clothing Studios is a tribute to the women who raised us. The name **Mosa
 
 Rooted in Botswana heritage. Designed for the modern African.
 
-**Founders:** Lethogonolo Brian Dintwe & Temogo Tale  
+**Founders:**   King & Temogo Tale  
 **Founded:** 2024  
 **Based:** Gaborone, Botswana
 
