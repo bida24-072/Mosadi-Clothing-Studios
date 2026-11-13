@@ -1847,18 +1847,20 @@ footer {
 }
 .page-header {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 120px 20px; /* Adjust height here */
+    background-size: cover !important; /* Forces image to cover the whole area */
+    background-position: center center !important; /* Keeps the woman centered */
+    background-repeat: no-repeat !important; /* Forces NO repeating */
+    background-attachment: scroll;
+    padding: 120px 20px;
     text-align: center;
+    overflow: hidden; /* Cuts off any weird edges */
 }
 
 /* The dark tint over the image */
 .page-header .overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(42, 24, 16, 0.85); /* Matches your dark brown background */
+    background: rgba(42, 24, 16, 0.85); /* Your dark brown tint */
     z-index: 1;
 }
 
@@ -1871,7 +1873,7 @@ footer {
 }
 
 .page-header h1 {
-    font-family: 'Playfair Display', serif; /* Or your specific font */
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     color: #fff;
     margin-bottom: 15px;
@@ -1880,7 +1882,7 @@ footer {
 
 .page-header h1 em {
     font-style: italic;
-    color: #f26b38; /* The orange "Shop" color */
+    color: #f26b38; 
     font-family: 'Playfair Display', serif; 
 }
 
@@ -1888,5 +1890,5 @@ footer {
     color: #e0dcd5;
     font-size: 1.1rem;
     line-height: 1.6;
-    font-family: 'Inter', sans-serif; /* Or your body font */
+    font-family: 'Inter', sans-serif; 
 }
